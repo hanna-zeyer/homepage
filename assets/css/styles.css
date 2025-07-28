@@ -370,6 +370,7 @@ h2 {
   flex: 1;
   margin: 100px 0;
 }
+/*
 .project-credits {
     display: flex;
     flex-direction: row;
@@ -387,6 +388,35 @@ h2 {
 .project-name { 
   font-family: Arial, sans-serif; font-size: 4rem; color: #000;
   -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #f2f2f2;
+}
+*/
+.project-credits {
+  display: flex;
+  align-items: flex-start; /* allows wrapped lines to align to top */
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+.project-role {
+  font-family: Arial, sans-serif;
+  font-size: 3vw;
+  color: #f2f2f2;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+  flex-shrink: 0;       /* don't shrink */
+  flex-grow: 0;         /* don't grow */
+  white-space: nowrap;  /* force single line */
+}
+.project-name {
+  font-family: Arial, sans-serif;
+  font-size: 3.5vw;
+  color: #000;
+  flex: 1;              /* take remaining space */
+  min-width: 0;         /* allow text to wrap */
+  word-break: break-word;
+  /*
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #f2f2f2;
+  */
 }
 .project-label { 
   font-family: Arial, sans-serif; font-size: 3rem; color: #CCFF66;
@@ -417,7 +447,7 @@ function updateSlidePosition() {
 
 .back-arrow {
   position: absolute;
-  top: 20px;
+  top: 0;
   left: 40px;
   font-size: 6em;
   text-decoration: none;
@@ -461,10 +491,10 @@ function updateSlidePosition() {
 
 .carousel-container {
   position: relative;
-  max-width: 1800px;
+  max-width: 1200px;
   max-height: 1200px;
   margin: 150px auto;
-  overflow: hidden;
+  /*overflow: hidden;*/
   padding: 0 5%;
 }
 /*
@@ -484,10 +514,12 @@ function updateSlidePosition() {
   transition: transform 0.5s ease-in-out;
 }
 .carousel-slide {
-  flex: 0 0 60%;
-  box-sizing: border-box;
+  flex: 0 0 100%; /* or change to 100% for full width */
+  max-width: 100%;
+  /* flex: 0 0 60%; */
   padding: 0 10px;
   text-align: center;
+  box-sizing: border-box;
 }
 .image-container {
   width: 100%;
@@ -587,6 +619,10 @@ function updateSlidePosition() {
   }
   .carousel-slide {
     flex: 0 0 100%;
+  }
+  .project-role,
+  .project-name {
+    font-size: 5vw;
   }
 }
 

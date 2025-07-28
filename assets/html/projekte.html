@@ -87,7 +87,10 @@
     const nextButton = document.querySelector('.carousel-btn.next');
 
     const totalSlides = slides.length;
-    let currentIndex = 0;
+    let currentIndex = Math.floor(Math.random() * totalSlides);
+    while (currentIndex == 0 || currentIndex == (slides.length - 1)) {
+      currentIndex = Math.floor(Math.random() * totalSlides);
+    }
     //if (totalSlides % 2 == 0) {
     //  currentIndex = totalSlides / 2;
     //} else {
@@ -97,7 +100,8 @@
     const visibleSlides = 1; 
 
     function getSlideWidth() {
-      return track.getBoundingClientRect().width * 0.4;
+      //return track.getBoundingClientRect().width * 0.4;
+      return slides[0].getBoundingClientRect().width;
     }
 
     function updateSlidePosition() {
@@ -106,11 +110,10 @@
     }
 
     function moveToNext() {
-      //if (currentIndex < totalSlides - visibleSlides) {
-      if (currentIndex < totalSlides) {
+      if (currentIndex < totalSlides - visibleSlides) {
         currentIndex++;
       } else {
-        currentIndex = 0;
+        currentIndex = Math.floor(Math.random() * totalSlides);
       }
       updateSlidePosition();
     }
@@ -148,7 +151,12 @@
     }
 
     window.addEventListener('resize', updateBtnPosition);
-    window.addEventListener('load', updateBtnPosition);
+    //window.addEventListener('load', updateBtnPosition);
+    window.addEventListener('load', () => {
+      shuffleSlides(); // or shuffleSlidesPersistently();
+      updateSlidePosition();
+      updateBtnPosition();
+    });
   </script>
   <!-- shuffle everytime -->
   <script>
