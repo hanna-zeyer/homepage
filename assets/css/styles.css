@@ -17,11 +17,9 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-  /*
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000; 
   color: #CCFF66;
-  */
 }
 
 ul {
@@ -176,7 +174,7 @@ h2 {
   color: #3e875b;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000;
-  padding: 0 2rem;
+  padding: 200px 4rem;
   margin: 3rem auto;
 }
 
@@ -199,13 +197,26 @@ h2 {
   background: #333;
 }
 
+/*
 .topnav {
   background-color: #f2f2f2;
   position: relative;
 }
-
 .topnav #links {
   display: none;
+  flex-direction: column;
+  padding: 1em;
+}
+*/
+.topnav {
+  background-color: #f2f2f2;
+  padding: 1rem 2rem;
+}
+
+#links {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .topnav a {
@@ -322,18 +333,20 @@ h2 {
   text-transform: uppercase;
   color: #7B68EE;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #f2f2f2;
+  -webkit-text-stroke-color: #000;
   margin: 0;
   margin-top: 1px;
+  text-align: center;
 }
 .project-container h2 {
   font-family: Arial, sans-serif;
   font-size: 3rem;
-  color: #000;
+  color: #f2f2f2;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #f2f2f2;
+  -webkit-text-stroke-color: #000;
   text-transform: uppercase;
   margin: 60px 0;
+  text-align: center;
 }
 .project-container h3 {
   font-family: Arial, sans-serif;
@@ -366,8 +379,8 @@ h2 {
 }
 .project-role {
   font-family: Arial, sans-serif;
-  font-size: 4rem;
-  color: #CCFF66;
+  font-size: 3rem;
+  color: #f2f2f2;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #000;
 }
@@ -376,13 +389,63 @@ h2 {
   -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #f2f2f2;
 }
 .project-label { 
-  font-family: Arial, sans-serif; font-size: 3rem; color: #000;
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #CCFF66;
-  text-align: left; text-transform: uppercase;
+  font-family: Arial, sans-serif; font-size: 3rem; color: #CCFF66;
+  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #7B68EE;
+  text-align: center; text-transform: uppercase;
+  line-height: 1.7em;
 }
-.project-label span { 
+.project-label h6 {
+  font-family: Arial, sans-serif; font-size: 4rem; color: #CCFF66;
+  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #7B68EE;
+  text-align: center; text-transform: uppercase; 
+}
+.project-label span {function getSlideWidth() {
+  return slides[0].getBoundingClientRect().width;
+}
+
+function updateSlidePosition() {
+  const container = document.querySelector('.carousel-container');
+  const slideWidth = getSlideWidth();
+  const containerWidth = container.getBoundingClientRect().width;
+  const offset = (slideWidth - containerWidth) / -2;
+
+  track.style.transform = `translateX(${offset - currentIndex * slideWidth}px)`;
+} 
   /* background-color: #7B68EE; */
   background-color: transparent;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 6em;
+  text-decoration: none;
+  z-index: 1000;
+  color: #f2f2f2;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+  letter-spacing: -6px;
+}
+
+.back-arrow a {
+  color: #f2f2f2;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+}
+
+.back-arrow:hover {
+  color: #000;
+}
+
+.custom-arrow {
+  width: 2em;
+  height: 2em;
+  stroke: #000; /* vivid green */
+  stroke-width: 6;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  fill: none;
 }
 
 .site-footer {
@@ -404,6 +467,18 @@ h2 {
   overflow: hidden;
   padding: 0 5%;
 }
+/*
+.carousel-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  position: relative;
+  max-width: 1800px;
+  margin: 150px auto;
+  overflow: hidden;
+  padding: 0 5%;
+}
+*/
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
@@ -437,6 +512,9 @@ h2 {
 }
 .carousel-slide:hover .overlay {
   opacity: 0.6; 
+}
+.carousel-slide img:hover {
+  border: 6px solid #CCFF66;
 }
 .image-container img {
   position: relative;
@@ -495,6 +573,9 @@ h2 {
 
 @media (max-width: 768px) {
   .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
     font-size: 2.5rem;
   }
   nav ul {

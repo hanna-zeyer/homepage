@@ -10,6 +10,9 @@
 </head>
 <body>
   <main>
+    <a href="../../index.html" class="back-arrow" aria-label="Zurück">
+      &#129104
+    </a>
     <div class="topnav">
       <a href="#home" class="active"></a>
       <div id="links">
@@ -29,7 +32,7 @@
             <a href="./projects/hautsam.html">
               <img src="../img/hautsam/01.jpg" alt="Slide 1">
             </a>
-            <div class="overlay"></div>
+            <!--div class="overlay"></div-->
           </div>
           <div class="carousel-description">
             <h2>Hautsam</h2>
@@ -41,7 +44,6 @@
             <a href="./projects/die_saeule_geht_an_der_last_vorbei.html">
               <img src="../img/die_saeule_geht_an_der_last_vorbei/02.jpg" alt="Slide 3">
             </a>
-            <div class="overlay"></div>
           </div>
           <div class="carousel-description">
             <h2>Die Säule geht an der Last vorbei</h2>
@@ -53,7 +55,6 @@
             <a href="./projects/studio21.html">
               <img src="../img/studio21/02.jpg" alt="Slide 2">
             </a>
-            <div class="overlay"></div>
           </div>
           <div class="carousel-description">
             <h2>Studio 21</h2>
@@ -87,12 +88,12 @@
 
     const totalSlides = slides.length;
     let currentIndex = 0;
-    if (totalSlides % 2 == 0) {
-      currentIndex = totalSlides / 2;
-    } else {
-      currentIndex = (totalSlides - 1) / 2;
-    }
-    currentIndex--;
+    //if (totalSlides % 2 == 0) {
+    //  currentIndex = totalSlides / 2;
+    //} else {
+    //  currentIndex = (totalSlides - 1) / 2;
+    //}
+    //currentIndex--;
     const visibleSlides = 1; 
 
     function getSlideWidth() {
@@ -105,7 +106,8 @@
     }
 
     function moveToNext() {
-      if (currentIndex < totalSlides - visibleSlides) {
+      //if (currentIndex < totalSlides - visibleSlides) {
+      if (currentIndex < totalSlides) {
         currentIndex++;
       } else {
         currentIndex = 0;
@@ -133,5 +135,91 @@
     window.addEventListener('resize', updateSlidePosition);
     updateSlidePosition();
   </script>
+  <script>
+    const imageContainer = document.querySelector('.image-container');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+
+    function updateBtnPosition() {
+      const height = imageContainer.offsetHeight;
+      const center = height / 2;
+      prevBtn.style.top = `${center}px`;
+      nextBtn.style.top = `${center}px`;
+    }
+
+    window.addEventListener('resize', updateBtnPosition);
+    window.addEventListener('load', updateBtnPosition);
+  </script>
+  <!-- shuffle everytime -->
+  <script>
+    // ...your existing carousel code...
+
+    // 🎲 Shuffle carousel slides
+    function shuffleSlides() {
+      const track = document.querySelector('.carousel-track');
+      const slides = Array.from(track.children);
+
+      // Fisher-Yates shuffle
+      for (let i = slides.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [slides[i], slides[j]] = [slides[j], slides[i]];
+      }
+
+      // Remove all slides from track and append them in new order
+      slides.forEach(slide => track.appendChild(slide));
+    }
+
+    // Run it before positioning logic
+    shuffleSlides();
+    updateSlidePosition();
+  </script>
+  <!-- random order to stays the same within a session -->
+  <!--script>
+    const track = document.querySelector('.carousel-track');
+
+    function getSlideKeys() {
+      return Array.from(track.children).map(slide => slide.querySelector('img').src);
+    }
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function shuffleSlidesPersistently() {
+      const slides = Array.from(track.children);
+      const slideMap = new Map(slides.map(slide => [slide.querySelector('img').src, slide]));
+
+      let order;
+
+      // 🔁 Check if a shuffled order is saved
+      const savedOrder = sessionStorage.getItem('carouselOrder');
+      if (savedOrder) {
+        order = JSON.parse(savedOrder);
+      } else {
+        // 🎲 Shuffle and store order
+        order = getSlideKeys();
+        shuffleArray(order);
+        sessionStorage.setItem('carouselOrder', JSON.stringify(order));
+      }
+
+      // 🧩 Reorder DOM
+      order.forEach(src => {
+        const slide = slideMap.get(src);
+        if (slide) {
+          track.appendChild(slide); // This moves the slide to the end in correct order
+        }
+      });
+    }
+
+    // 📦 Run before anything else
+    shuffleSlidesPersistently();
+    updateSlidePosition();
+
+    // Your other carousel logic (navigation, autoplay, etc.)
+  </script-->
 </body>
 </html>
