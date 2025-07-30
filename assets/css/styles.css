@@ -8,7 +8,12 @@
   --font-large: 6rem;
   --font-mid: 4rem;
   --font-small: 3rem;
+  --font-smaller: 2rem;
+  --font-tiny: 1.5rem;
+  --font-super-tiny: .5rem;
   --font-weight: 900;
+  --font-weight-light: 100;
+  --font-weight-heavy: bolder;
   /**/
 }
 
@@ -79,15 +84,31 @@ ul {
 nav ul {
   display: flex;
   gap: 2rem;
+  font-weight: bolder;
 }
 
 nav a {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.9rem; font-weight: bolder;
 }
 
-
+.description {
+  font-size: var(--font-small); font-weight: bolder;
+  padding: 2rem 4rem 3rem;
+  margin-top: 5%;
+}
+.description a.email {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--black); 
+  font-size: var(--font-smaller);
+  color: var(--color2);
+}
+.description p {
+  color: var(--black);
+  font-size: var(--font-tiny);
+  font-weight: var(--font-weight-light);
+}
 
 h3 {
   font-size: 2rem;
@@ -513,4 +534,3 @@ h2 {
     font-size: 5vw;
   }
 }
-
