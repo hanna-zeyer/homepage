@@ -8,25 +8,34 @@
   <link rel="stylesheet" 
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+    /*
   body {
     margin: 100px auto;
     line-height: 1.6;
   }
-
+*/
+  
+  gallery {
+    margin: 200px 0;
+  }
   article.post {
-    border-top: 3px solid var(--black);
-    border-bottom: 3px solid var(--black);
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
     display: flex;
     align-items: stretch;
     padding: 0;
     gap: 0;
-    margin: 2rem 0;
+    margin: 70px 0;
     height: 600px; /* fixed height for consistent layout */
   }
 
   /* Alternate image left or right */
-  article.post:nth-child(even) {
+  article.post:nth-child(odd) {
     flex-direction: row-reverse;
+    text-align: left;
+  }
+  article.post:nth-child(even) {
+    text-align: right;
   }
 
   a.title-link {
@@ -37,9 +46,9 @@
     text-transform: uppercase;
   }
   article.post a.title-link:hover {
-    color: var(--color2);
+    color: var(--color1);
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: var(--color1);
+    -webkit-text-stroke-color: var(--black);
   }
 
   article.post a.image-link {
@@ -55,13 +64,13 @@
     display: block;
   }
 
+  /*
   article.post a.image-link img:hover {
     border: 6px solid var(--color2);
-    /*
     outline-color: var(--color1);
     outline-style: solid;
-    */
   }
+  */
 
   article.post .post-content {
     width: 50%;
@@ -80,13 +89,16 @@
     color: var(--white);
   }
   .highlighted-text {
-    background-color: var(--black); 
     display: inline-block;          
-    padding: 0.2rem 0.4rem;         /* optional: adds spacing inside the highlight */
+    color: var(--black);
+    /*
+    background-color: var(--black); 
+    padding: 0.2rem 0.4rem;         
+    */
   }
 
   /* Responsive for smaller screens */
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     article.post {
       flex-direction: column;
       height: auto; /* allow vertical stacking to grow naturally */
@@ -127,10 +139,7 @@
 </style>
 </head>
 <body>
-  <a href="../../index.html" class="back-arrow" aria-label="Zurück">
-    &#129104
-  </a>
-
+  <!--a href="../../index.html" class="back-arrow" aria-label="Zurück"> &#129104 </a-->
   <div class="topnav">
     <a href="#home" class="active"></a>
     <div id="links">
@@ -151,7 +160,7 @@
       <a href="https://www.farbwerk-kultur.de/?p=2951" class="title-link" aria-label="">
         Nische sucht Nische!
       </a>
-      <p><span class="highlighted-text">Galeriespaziergang, Dresden 2025</span></p>
+      <!--p><span class="highlighted-text">Galeriespaziergang, Dresden 2025</span></p-->
     </div>
   </article>
 
@@ -163,7 +172,7 @@
       <a href="./projects/wenn_ich_jetzt_stehen_bleibe.html" class="title-link" aria-label="">
         Wenn ich jetzt stehen bleibe...
       </a>
-      <p><span class="highlighted-text">Zentralwerk, Dresden 2025</span></p>
+      <!--p><span class="highlighted-text">Zentralwerk, Dresden 2025</span></p-->
     </div>
   </article>
 
@@ -175,7 +184,7 @@
       <a href="./projects/alle_gegen_alle.html" class="title-link" aria-label="">
         #Alle gegen Alle
       </a>
-      <p><span class="highlighted-text">Staatsschauspiel Dresden, Dresden 2024</span></p>
+      <!--p><span class="highlighted-text">Staatsschauspiel Dresden, Dresden 2024</span></p-->
     </div>
   </article>
 
@@ -187,7 +196,7 @@
       <a href="./projects/wunschbehoerde.html" class="title-link" aria-label="">
         Wunschbehörde
       </a>
-      <p><span class="highlighted-text">Staatsschauspiel Dresden, Dresden 2023</span></p>
+      <!--p><span class="highlighted-text">Staatsschauspiel Dresden, Dresden 2023</span></p-->
     </div>
   </article>
 
@@ -199,7 +208,7 @@
       <a href="./projects/nacht_der_oneironauten.html" class="title-link" aria-label="">
         Nacht der Oneironauten
       </a>
-      <p><span class="highlighted-text">Rosenwerk, Dresden 2023</span></p>
+      <!--p><span class="highlighted-text">Rosenwerk, Dresden 2023</span></p-->
     </div>
   </article>
 
@@ -211,7 +220,7 @@
       <a href="./projects/hautsam.html" class="title-link" aria-label="">
         Hautsam
       </a>
-      <p><span class="highlighted-text">Hole of Fame, Dresden 2022</span></p>
+      <!--p><span class="highlighted-text">Hole of Fame, Dresden 2022</span></p-->
     </div>
     </div>
   </article>
@@ -224,7 +233,7 @@
       <a href="./projects/die_saeule_geht_an_der_last_vorbei.html" class="title-link" aria-label="">
         Die Säule geht an der Last vorbei
       </a>
-      <p><span class="highlighted-text">Atelier Goldstein, Frankfurt am Main 2022</span></p>
+      <!--p><span class="highlighted-text">Atelier Goldstein, Frankfurt am Main 2022</span></p-->
     </div>
   </article>
 
@@ -236,7 +245,7 @@
       <a href="./projects/studio21.html" class="title-link" aria-label="">
         Studio 21
       </a>
-      <p><span class="highlighted-text">RambaZamba Theater, Berlin 2021</span></p>
+      <!--p><span class="highlighted-text">RambaZamba Theater, Berlin 2021</span></p-->
     </div>
   </article>
 
@@ -248,7 +257,7 @@
       <a href="./projects/nils_karlsson.html" class="title-link" aria-label="">
         Nils Karlsson Däumling
       </a>
-      <p><span class="highlighted-text">Junge Szene der Sächsischen Staatsoper, Dresden 2021</span></p>
+      <!--p><span class="highlighted-text">Junge Szene der Sächsischen Staatsoper, Dresden 2021</span></p-->
     </div>
   </article>
 
@@ -260,7 +269,7 @@
       <a href="./projects/moving_stories.html" class="title-link" aria-label="">
         Moving Stories
       </a>
-      <p><span class="highlighted-text">Junge Szene der Sächsischen Staatsoper im Labortheater HfBK Dresden, Dresden 2018</span></p>
+      <!--p><span class="highlighted-text">Junge Szene der Sächsischen Staatsoper im Labortheater HfBK Dresden, Dresden 2018</span></p-->
     </div>
   </article>
   <script src="../js/main.js" type="text/javascript"></script>
