@@ -15,9 +15,6 @@
   }
 */
   
-  gallery {
-    margin: 200px 0;
-  }
   article.post {
     border-top: 2px solid var(--black);
     border-bottom: 2px solid var(--black);
@@ -32,10 +29,6 @@
   /* Alternate image left or right */
   article.post:nth-child(odd) {
     flex-direction: row-reverse;
-    text-align: left;
-  }
-  article.post:nth-child(even) {
-    text-align: right;
   }
 
   a.title-link {
@@ -135,12 +128,17 @@
     .post-content p {
       font-size: 0.9rem;
     }
+
+    .back-arrow {
+      font-size: 1.5rem;
+      padding: 0.4rem 0.8rem;
+    }
   }
 </style>
 </head>
 <body>
-  <!--a href="../../index.html" class="back-arrow" aria-label="Zurück"> &#129104 </a-->
   <div class="topnav">
+  <a href="../../index.html" class="back-arrow" aria-label="Zurück"> &#129104 </a>
     <a href="#home" class="active"></a>
     <div id="links">
       <a href="./vita.html">Vita</a>
