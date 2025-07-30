@@ -1,299 +1,333 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <title>PROJEKTE</title>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PROJEKTE</title>
   <link rel="stylesheet" href="../css/styles.css"/>
   <link rel="stylesheet" 
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body {
+    margin: 100px auto;
+    line-height: 1.6;
+  }
+
+  /*
+  article.post {
+    border-top: 3px solid var(--black);
+    border-bottom: 3px solid var(--black);
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    gap: 0;
+    margin: 2rem 0;
+    min-height: 180px;
+  }
+*/
+
+article.post {
+  border-top: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  gap: 0;
+  margin: 2rem 0;
+  height: 600px; /* fixed height for consistent layout */
+}
+
+  /* Alternate image left or right */
+  article.post:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  a.title-link {
+    font-size: var(--font-small); font-weight: bolder;
+    color: var(--white);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--black);
+    text-transform: uppercase;
+  }
+  article.post a.title-link:hover {
+    color: var(--color2);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--color1);
+  }
+
+  /* Link wrapping the image */
+  /*
+  article.post a.image-link {
+    width: 50%;
+    display: block;
+    height: 100%;
+    aspect-ratio: 6 / 4;
+  }
+*/
+
+article.post a.image-link {
+  width: 50%;
+  height: 100%;
+  display: block;
+}
+
+  article.post a.image-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /*
+  article.post .post-content {
+    width: 50%;
+    padding: 2rem 2.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+*/
+
+article.post .post-content {
+  width: 50%;
+  height: 100%;
+  padding: 2rem 2.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* text goes to bottom */
+}
+
+  article.post p {
+    font-size: 1rem; font-weight: bolder;
+    text-transform: uppercase;
+    margin-top: 0;
+    color: var(--white);
+  }
+  .highlighted-text {
+    background-color: var(--black); 
+    display: inline-block;          
+    padding: 0.2rem 0.4rem;         /* optional: adds spacing inside the highlight */
+  }
+
+  /*
+  article.post time {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.3rem;
+    font-family: monospace, monospace;
+  }
+  article.post h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  article.post h2 a {
+    color: #111;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  article.post h2 a:hover,
+  article.post h2 a:focus {
+    color: #666;
+    outline: none;
+  }
+
+  article.post p {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 0;
+  }
+*/
+
+  /* Responsive for smaller screens */
+@media (max-width: 700px) {
+  article.post {
+    flex-direction: column;
+    height: auto; /* allow vertical stacking to grow naturally */
+  }
+
+  article.post .image-link,
+  article.post .post-content {
+    width: 100%;
+    height: auto;
+  }
+
+  article.post .image-link {
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  article.post .image-link img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  article.post .post-content {
+    padding: 1.5rem 1.2rem;
+    justify-content: initial;
+  }
+
+  .title-link {
+    font-size: calc(var(--font-small) * 0.9);
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .post-content p {
+    font-size: 0.9rem;
+  }
+}
+
+</style>
+
 </head>
 <body>
-  <main>
-    <a href="../../index.html" class="back-arrow" aria-label="Zurück">
-      &#129104
+  <a href="../../index.html" class="back-arrow" aria-label="Zurück">
+    &#129104
+  </a>
+
+  <div class="topnav">
+    <a href="#home" class="active"></a>
+    <div id="links">
+      <a href="./vita.html">Vita</a>
+      <a href="./projekte.html">Projekte</a>
+      <a href="./kontakt.html">Kontakt</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="navUtil()">
+      <i class="fa fa-bars"></i>
     </a>
-    <div class="topnav">
-      <a href="#home" class="active"></a>
-      <div id="links">
-        <a href="./vita.html">Vita</a>
-        <a href="./projekte.html">Projekte</a>
-        <a href="./kontakt.html">Kontakt</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="navUtil()">
-        <i class="fa fa-bars"></i>
+  </div>
+
+  <article class="post">
+    <a href="https://www.farbwerk-kultur.de/?p=2951" class="image-link" aria-label="">
+      <img src="https://www.farbwerk-kultur.de/wp-content/uploads/2025/04/Insta_NischeSuchtNische.jpg" alt="" />
+    </a>
+    <div class="post-content">
+      <a href="https://www.farbwerk-kultur.de/?p=2951" class="title-link" aria-label="">
+        Nische sucht Nische!
       </a>
+      <p><span class="highlighted-text">Galeriespaziergang, Dresden 2025</span></p>
     </div>
-    <div class="carousel-container">
-      <button class="carousel-btn prev">&#10094;</button>
-      <div class="carousel-track">
-        <div class="carousel-slide">
-          <div class="image-container">
-            <a href="./projects/hautsam.html">
-              <img src="../img/hautsam/01.jpg" alt="Slide 1">
-            </a>
-            <!--div class="overlay"></div-->
-          </div>
-          <div class="carousel-description">
-            <h2>Hautsam</h2>
-            <p>Hole of Fame, Dresden 2022</p>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="image-container">
-            <a href="./projects/die_saeule_geht_an_der_last_vorbei.html">
-              <img src="../img/die_saeule_geht_an_der_last_vorbei/02.jpg" alt="Slide 3">
-            </a>
-          </div>
-          <div class="carousel-description">
-            <h2>Die Säule geht an der Last vorbei</h2>
-            <p>Atelier Goldstein, Frankfurt am Main 2022</p>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="image-container">
-            <a href="./projects/studio21.html">
-              <img src="../img/studio21/02.jpg" alt="Slide 2">
-            </a>
-          </div>
-          <div class="carousel-description">
-            <h2>Studio 21</h2>
-            <p>RambaZamba Theater, Berlin 2021</p>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="image-container">
-            <a href="./projects/nils_karlsson.html">
-              <img src="../img/nils_karlsson/01.jpg" alt="Slide 2">
-            </a>
-          </div>
-          <div class="carousel-description">
-            <h2>Nils Karlsson Däumling</h2>
-            <p>Junge Szene der Sächsischen Staatsoper, Dresden 2021</p>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="image-container">
-            <a href="./projects/panta_rhei.html">
-              <img src="../img/panta_rhei/02.jpg" alt="Slide 2">
-            </a>
-          </div>
-          <div class="carousel-description">
-            <h2>Panta Rhei</h2>
-            <p>Palucca Hochschule für Tanz im Labortheater HfBK Dresden, Dresden 2020</p>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="image-container">
-            <a href="./projects/nacht_der_oneironauten.html">
-              <img src="../img/nacht_der_oneironauten/02.jpg" alt="Slide 2">
-            </a>
-          </div>
-          <div class="carousel-description">
-            <h2>Nacht der Oneironauten</h2>
-            <p>Rosenwerk, Dresden 2023</p>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="image-container">
-            <a href="./projects/wunschbehoerde.html">
-              <img src="../img/wunschbehoerde/01.jpg" alt="Slide 2">
-            </a>
-          </div>
-          <div class="carousel-description">
-            <h2>Wunschbehörde</h2>
-            <p>Staatsschauspiel Dresden, Dresden 2023</p>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="image-container">
-            <a href="./projects/alle_gegen_alle.html">
-              <img src="../img/alle_gegen_alle/01.jpg" alt="Slide 2">
-            </a>
-          </div>
-          <div class="carousel-description">
-            <h2>#Alle gegen Alle</h2>
-            <p>Staatsschauspiel Dresden, Dresden 2024</p>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="image-container">
-            <a href="./projects/wenn_ich_jetzt_stehen_bleibe.html">
-              <img src="../img/wenn_ich_jetzt_stehen_bleibe/06.jpg" alt="Slide 2">
-            </a>
-          </div>
-          <div class="carousel-description">
-            <h2>Wenn ich jetzt stehen bleibe...</h2>
-            <p>Zentralwerk, Dresden 2025</p>
-          </div>
-        </div>
-        <div class="carousel-slide">
-          <div class="image-container">
-            <a href="./projects/moving_stories.html">
-              <img src="../img/moving_stories/02.jpg" alt="Slide 2">
-            </a>
-          </div>
-          <div class="carousel-description">
-            <h2>Moving Stories</h2>
-            <p>Junge Szene der Sächsischen Staatsoper im Labortheater HfBK Dresden, Dresden 2018</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-btn next">&#10095;</button>
+  </article>
+
+  <article class="post">
+    <a href="./projects/wenn_ich_jetzt_stehen_bleibe.html" class="image-link" aria-label="">
+      <img src="../img/wenn_ich_jetzt_stehen_bleibe/06.jpg" alt="" />
+    </a>
+    <div class="post-content">
+      <a href="./projects/wenn_ich_jetzt_stehen_bleibe.html" class="title-link" aria-label="">
+        Wenn ich jetzt stehen bleibe...
+      </a>
+      <p><span class="highlighted-text">Zentralwerk, Dresden 2025</span></p>
     </div>
-  </main>
-  <footer class="site-footer">
-    <p>&copy; 2025 Hanna Zeyer</p>
-  </footer>
+  </article>
+
+  <article class="post">
+    <a href="./projects/alle_gegen_alle.html" class="image-link" aria-label="">
+      <img src="../img/alle_gegen_alle/01.jpg" alt="" />
+    </a>
+    <div class="post-content">
+      <a href="./projects/alle_gegen_alle.html" class="title-link" aria-label="">
+        #Alle gegen Alle
+      </a>
+      <p><span class="highlighted-text">Staatsschauspiel Dresden, Dresden 2024</span></p>
+    </div>
+  </article>
+
+  <article class="post">
+    <a href="./projects/wunschbehoerde.html" class="image-link" aria-label="">
+      <img src="../img/wunschbehoerde/01.jpg" alt="" />
+    </a>
+    <div class="post-content">
+      <a href="./projects/wunschbehoerde.html" class="title-link" aria-label="">
+        Wunschbehörde
+      </a>
+      <p><span class="highlighted-text">Staatsschauspiel Dresden, Dresden 2023</span></p>
+    </div>
+  </article>
+
+  <article class="post">
+    <a href="./projects/nacht_der_oneironauten.html" class="image-link" aria-label="">
+      <img src="../img/nacht_der_oneironauten/02.jpg" alt="" />
+    </a>
+    <div class="post-content">
+      <a href="./projects/nacht_der_oneironauten.html" class="title-link" aria-label="">
+        Nacht der Oneironauten
+      </a>
+      <p><span class="highlighted-text">Rosenwerk, Dresden 2023</span></p>
+    </div>
+  </article>
+
+  <article class="post">
+    <a href="./projects/hautsam.html" class="image-link" aria-label="">
+      <img src="../img/hautsam/01.jpg" alt="" />
+    </a>
+    <div class="post-content">
+      <a href="./projects/hautsam.html" class="title-link" aria-label="">
+        Hautsam
+      </a>
+      <p><span class="highlighted-text">Hole of Fame, Dresden 2022</span></p>
+    </div>
+    </div>
+  </article>
+
+  <article class="post">
+    <a href="./projects/die_saeule_geht_an_der_last_vorbei.html" class="image-link" aria-label="">
+      <img src="../img/die_saeule_geht_an_der_last_vorbei/02.jpg" alt="" />
+    </a>
+    <div class="post-content">
+      <a href="./projects/die_saeule_geht_an_der_last_vorbei.html" class="title-link" aria-label="">
+        Die Säule geht an der Last vorbei
+      </a>
+      <p><span class="highlighted-text">Atelier Goldstein, Frankfurt am Main 2022</span></p>
+    </div>
+  </article>
+
+  <article class="post">
+    <a href="./projects/studio21.html" class="image-link" aria-label="">
+      <img src="../img/studio21/03.jpg" alt="" />
+    </a>
+    <div class="post-content">
+      <a href="./projects/studio21.html" class="title-link" aria-label="">
+        Studio 21
+      </a>
+      <p><span class="highlighted-text">RambaZamba Theater, Berlin 2021</span></p>
+    </div>
+  </article>
+
+  <article class="post">
+    <a href="./projects/nils_karlsson.html" class="image-link" aria-label="">
+      <img src="../img/nils_karlsson/01.jpg" alt="" />
+    </a>
+    <div class="post-content">
+      <a href="./projects/nils_karlsson.html" class="title-link" aria-label="">
+        Nils Karlsson Däumling
+      </a>
+      <p><span class="highlighted-text">Junge Szene der Sächsischen Staatsoper, Dresden 2021</span></p>
+    </div>
+  </article>
+
+  <article class="post">
+    <a href="./projects/moving_stories.html" class="image-link" aria-label="">
+      <img src="../img/moving_stories/01.jpg" alt="" />
+    </a>
+    <div class="post-content">
+      <a href="./projects/moving_stories.html" class="title-link" aria-label="">
+        Moving Stories
+      </a>
+      <p><span class="highlighted-text">Junge Szene der Sächsischen Staatsoper im Labortheater HfBK Dresden, Dresden 2018</span></p>
+    </div>
+  </article>
+
   <script src="../js/main.js" type="text/javascript"></script>
-  <script>
-    const track = document.querySelector('.carousel-track');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevButton = document.querySelector('.carousel-btn.prev');
-    const nextButton = document.querySelector('.carousel-btn.next');
 
-    const totalSlides = slides.length;
-    let currentIndex = Math.floor(Math.random() * totalSlides);
-    while (currentIndex == 0 || currentIndex == (slides.length - 1)) {
-      currentIndex = Math.floor(Math.random() * totalSlides);
-    }
-    //if (totalSlides % 2 == 0) {
-    //  currentIndex = totalSlides / 2;
-    //} else {
-    //  currentIndex = (totalSlides - 1) / 2;
-    //}
-    //currentIndex--;
-    const visibleSlides = 1; 
-
-    function getSlideWidth() {
-      //return track.getBoundingClientRect().width * 0.4;
-      return slides[0].getBoundingClientRect().width;
-    }
-
-    function updateSlidePosition() {
-      const slideWidth = getSlideWidth();
-      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    }
-
-    function moveToNext() {
-      if (currentIndex < totalSlides - visibleSlides) {
-        currentIndex++;
-      } else {
-        currentIndex = Math.floor(Math.random() * totalSlides);
-      }
-      updateSlidePosition();
-    }
-
-    function moveToPrev() {
-      if (currentIndex > 0) {
-        currentIndex--;
-      } else {
-        currentIndex = totalSlides - visibleSlides;
-      }
-      updateSlidePosition();
-    }
-
-    nextButton.addEventListener('click', moveToNext);
-    prevButton.addEventListener('click', moveToPrev);
-
-    let autoScroll = setInterval(moveToNext, 3000);
-
-    document.querySelector('.carousel-container').addEventListener('mouseenter', () => clearInterval(autoScroll));
-    document.querySelector('.carousel-container').addEventListener('mouseleave', () => autoScroll = setInterval(moveToNext, 3000));
-
-    window.addEventListener('resize', updateSlidePosition);
-    updateSlidePosition();
-  </script>
-  <script>
-    const imageContainer = document.querySelector('.image-container');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-
-    function updateBtnPosition() {
-      const height = imageContainer.offsetHeight;
-      const center = height / 2;
-      prevBtn.style.top = `${center}px`;
-      nextBtn.style.top = `${center}px`;
-    }
-
-    window.addEventListener('resize', updateBtnPosition);
-    //window.addEventListener('load', updateBtnPosition);
-    window.addEventListener('load', () => {
-      shuffleSlides(); // or shuffleSlidesPersistently();
-      updateSlidePosition();
-      updateBtnPosition();
-    });
-  </script>
-  <!-- shuffle everytime -->
-  <script>
-    // ...your existing carousel code...
-
-    // 🎲 Shuffle carousel slides
-    function shuffleSlides() {
-      const track = document.querySelector('.carousel-track');
-      const slides = Array.from(track.children);
-
-      // Fisher-Yates shuffle
-      for (let i = slides.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [slides[i], slides[j]] = [slides[j], slides[i]];
-      }
-
-      // Remove all slides from track and append them in new order
-      slides.forEach(slide => track.appendChild(slide));
-    }
-
-    // Run it before positioning logic
-    shuffleSlides();
-    updateSlidePosition();
-  </script>
-  <!-- random order to stays the same within a session -->
-  <!--script>
-    const track = document.querySelector('.carousel-track');
-
-    function getSlideKeys() {
-      return Array.from(track.children).map(slide => slide.querySelector('img').src);
-    }
-
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    }
-
-    function shuffleSlidesPersistently() {
-      const slides = Array.from(track.children);
-      const slideMap = new Map(slides.map(slide => [slide.querySelector('img').src, slide]));
-
-      let order;
-
-      // 🔁 Check if a shuffled order is saved
-      const savedOrder = sessionStorage.getItem('carouselOrder');
-      if (savedOrder) {
-        order = JSON.parse(savedOrder);
-      } else {
-        // 🎲 Shuffle and store order
-        order = getSlideKeys();
-        shuffleArray(order);
-        sessionStorage.setItem('carouselOrder', JSON.stringify(order));
-      }
-
-      // 🧩 Reorder DOM
-      order.forEach(src => {
-        const slide = slideMap.get(src);
-        if (slide) {
-          track.appendChild(slide); // This moves the slide to the end in correct order
-        }
-      });
-    }
-
-    // 📦 Run before anything else
-    shuffleSlidesPersistently();
-    updateSlidePosition();
-
-    // Your other carousel logic (navigation, autoplay, etc.)
-  </script-->
 </body>
 </html>
