@@ -41,9 +41,15 @@
         Möglichkeiten gegeben. 
       </p>
        <ul class="project-wrapper">
-        <li><img src="../../img/alle_gegen_alle/02.jpg" alt="3"></l>
-        <li><img src="../../img/alle_gegen_alle/01.jpg" alt="3"></l>
+        <li><img src="../../img/alle_gegen_alle/02.jpg" alt="3" onclick="openSlideshow(0)"></l>
+        <li><img src="../../img/alle_gegen_alle/01.jpg" alt="3" onclick="openSlideshow(1)"></l>
        </ul>
+       <div id="slideshowModal" class="modal" onclick="closeSlideshow()">
+         <span class="close">&times;</span>
+         <img class="modal-content" id="modalImage">
+         <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+         <div class="next" onclick="changeSlide(1)">&#10095;</div>
+       </div>
       <p></p>        
       <div class="project-credits">
         <div class="project-role">Leitung</div>
