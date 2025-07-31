@@ -105,6 +105,12 @@ nav a {
   font-size: var(--font-smaller);
   color: var(--color2);
 }
+.description a.site {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--black); 
+  font-size: var(--font-smaller);
+  color: var(--color2);
+}
 .description p {
   color: var(--black);
   font-size: var(--font-tiny);
