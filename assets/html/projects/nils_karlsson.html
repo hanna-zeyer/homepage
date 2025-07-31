@@ -40,12 +40,18 @@
         annehmen.
       </p>
        <ul class="project-wrapper">
-        <li><img src="../../img/nils_karlsson/2.jpg" alt="3"></l>
-        <li class="large"><img src="../../img/nils_karlsson/1.jpg" alt="3"></l> 
-               <li class="large"><img src="../../img/nils_karlsson/5.jpg" alt="3"></l> 
-        <li><img src="../../img/nils_karlsson/6.jpg" alt="3"></l>
-             <li class="large"><img src="../../img/nils_karlsson/4.jpg" alt="3"></l>
+        <li><img src="../../img/nils_karlsson/2.jpg" alt="3" onclick="openSlideshow(0)"></li>
+        <li class="large"><img src="../../img/nils_karlsson/1.jpg" alt="3" onclick="openSlideshow(1)"></li> 
+        <li class="large"><img src="../../img/nils_karlsson/5.jpg" alt="3" onclick="openSlideshow(2)"></li> 
+        <li><img src="../../img/nils_karlsson/6.jpg" alt="3" onclick="openSlideshow(3)"></li>
+        <li class="large"><img src="../../img/nils_karlsson/4.jpg" alt="3" onclick="openSlideshow(4)"></li>
        </ul>
+       <div id="slideshowModal" class="modal" onclick="closeSlideshow()">
+         <span class="close">&times;</span>
+         <img class="modal-content" id="modalImage">
+         <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+         <div class="next" onclick="changeSlide(1)">&#10095;</div>
+       </div>
       <p></p>        
       <div class="project-credits">
         <div class="project-role">Regie</div>
@@ -72,5 +78,40 @@
     <p>&copy; 2025 Hanna Zeyer</p>
   </footer>
   <script src="../../js/main.js" type="text/javascript"></script>
+  <script>
+  const images = [
+        "../../img/nils_karlsson/2.jpg",
+        "../../img/nils_karlsson/1.jpg",
+        "../../img/nils_karlsson/5.jpg",
+        "../../img/nils_karlsson/6.jpg",
+        "../../img/nils_karlsson/4.jpg"
+  ];
+  let currentIndex = 0;
+
+  function openSlideshow(index) {
+    event.stopPropagation();
+    currentIndex = index;
+    document.getElementById("modalImage").src = images[index];
+    document.getElementById("slideshowModal").style.display = "block";
+  }
+
+  function closeSlideshow() {
+    document.getElementById("slideshowModal").style.display = "none";
+  }
+
+  function changeSlide(direction) {
+    event.stopPropagation();
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    document.getElementById("modalImage").src = images[currentIndex];
+  }
+
+  document.addEventListener("keydown", function(e) {
+    if (document.getElementById("slideshowModal").style.display === "block") {
+      if (e.key === "ArrowRight") changeSlide(1);
+      if (e.key === "ArrowLeft") changeSlide(-1);
+      if (e.key === "Escape") closeSlideshow();
+    }
+  });
+  </script>
 </body>
 </html>

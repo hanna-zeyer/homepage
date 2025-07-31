@@ -415,7 +415,7 @@ h2 {
 .close:hover {
   background-color: transparent;
   -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: var(--black);
-  color: var(--color2);
+  color: var(--color1);
 }
 .prev, .next {
   font-size: 6rem; font-weight: bold;
