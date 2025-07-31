@@ -517,6 +517,7 @@ h2 {
   .project-container h1,
   .project-container h2,
   .project-container h4,
+  .project-container h6,
   .project-label {
     font-size: var(--font-mid);
   }
