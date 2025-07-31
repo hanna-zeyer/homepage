@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>PROJEKTE: WAS WILLST DU VON MIR</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/styles.css"/>
+</head>
+<body>
+  <main>
+    <div class="topnav"> <a href="#home" class="active"></a>
+      <div id="links">
+        <a href="../vita.html">Vita</a>
+        <a href="../projekte.html">Projekte</a>
+        <a href="../kontakt.html">Kontakt</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="navUtil()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="project-container">
+      <div class="project-label">
+        <span><h6>Tanzstück</h6></span>
+        <h1>Was willst du von mir</h1>
+      </div>
+      <h2>Projektheater, Dresden 2023</h2>
+      <p>
+          Das Tanzfestival INKLUSIV im Projekttheater Dresden stand 2023 ganz im Zeichen
+          von Identitäts- und Körpererforschung – Künstler*innen mit und ohne
+          Behinderung begegneten sich in performativen, Grenzerfahrungen
+          ermöglichenden Formaten. <i>Was willst du von mir?</i> präsentierte sich
+          in diesem Kontext als Teil der Fusionen #3-Reihe – einem
+          abendfüllenden Panorama verschiedener choreografischer Arbeiten
+      </p>
+       <ul class="project-wrapper">
+        <li class="large"><img src="../../img/was_willst_du_von_mir/1.jpg" alt="3" onclick="openSlideshow(0)"></li>
+       </ul>
+       <div id="slideshowModal" class="modal" onclick="closeSlideshow()">
+         <span class="close">&times;</span>
+         <img class="modal-content" id="modalImage">
+         <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+         <div class="next" onclick="changeSlide(1)">&#10095;</div>
+       </div>
+      <p></p>        
+      <div class="project-credits">
+        <div class="project-role">Choreografie</div>
+        <div class="project-name">Nora Schott</div>
+      </div>
+      <div class="project-credits">
+        <div class="project-role">Ausstattung</div>
+        <div class="project-name">Hanna Zeyer</div>
+      </div>
+    </div>
+    <a href="../projekte.html" class="back-arrow" aria-label="Zurück">
+      &#10132;
+    </a>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 Hanna Zeyer</p>
+  </footer>
+  <script src="../../js/main.js" type="text/javascript"></script>
+    <script>
+    const images = [
+        "../../img/was_willst_du_von_mir/1.jpg",
+    ];
+    let currentIndex = 0;
+
+    function openSlideshow(index) {
+      event.stopPropagation();
+      currentIndex = index;
+      document.getElementById("modalImage").src = images[index];
+      document.getElementById("slideshowModal").style.display = "block";
+    }
+
+    function closeSlideshow() {
+      document.getElementById("slideshowModal").style.display = "none";
+    }
+
+    function changeSlide(direction) {
+      event.stopPropagation();
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      document.getElementById("modalImage").src = images[currentIndex];
+    }
+
+    document.addEventListener("keydown", function(e) {
+      if (document.getElementById("slideshowModal").style.display === "block") {
+        if (e.key === "ArrowRight") changeSlide(1);
+        if (e.key === "ArrowLeft") changeSlide(-1);
+        if (e.key === "Escape") closeSlideshow();
+      }
+    });
+    </script>
+</body>
+</html>
