@@ -14,6 +14,7 @@
   --font-weight: 900;
   --font-weight-light: 100;
   --font-weight-heavy: bolder;
+  --wtsw: 2px;
   /**/
 }
 
@@ -41,27 +42,26 @@ body {
 .hero h1 {
   font-size: var(--font-large); 
   text-transform: uppercase;
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   color: var(--color1);
 }
 .hero p {
   font-size: var(--font-mid); 
   text-transform: uppercase; text-align: center;
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: var(--black); 
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black); 
   color: var(--color2);
 }
 .hero .auto-input {
   font-size: var(--font-mid); font-weight: var(--font-weight-heavy);
   text-transform: uppercase; text-align: center;
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: var(--black); 
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black); 
   color: var(--color2);
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--black); 
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black); 
   color: var(--white);
   font-weight: var(--font-weight-heavy);
 }
@@ -104,14 +104,12 @@ nav a {
   margin-top: 5%;
 }
 .description a.email {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--black); 
+  -webkit-text-stroke-width:var(--wtsw); -webkit-text-stroke-color: var(--black); 
   font-size: var(--font-smaller);
   color: var(--color2);
 }
 .description a.site {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--black); 
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black); 
   font-size: var(--font-smaller);
   color: var(--color2);
 }
@@ -131,8 +129,7 @@ h4 {
   font-size: 1rem;
   text-transform: uppercase;
   color: #3e875b;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   margin: 3rem auto;
 }
 
@@ -173,14 +170,12 @@ h2 {
   font-size: 4rem; font-weight: var(--font-weight-heavy);
   display: block;
   color: var(--white);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
 }
 
 .topnav a.icon {
   color: var(--white);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   display: block;
   position: absolute;
   right: 0;
@@ -276,7 +271,7 @@ h2 {
   font-size: 6rem; font-weight: var(--font-weight-heavy);
   text-transform: uppercase;
   color: #6a6ff5;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: var(--wtsw);
   -webkit-text-stroke-color: var(--black);
   margin: 0;
   margin-top: 1px;
@@ -285,7 +280,7 @@ h2 {
 .project-container h2 {
   font-size: 3rem;
   color: var(--white);
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   margin: 60px 0;
   text-align: center;
   line-height: 1.2em;
@@ -301,8 +296,7 @@ h2 {
   font-size: 3rem;
   background: var(--black);
   color: var(--black);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--white);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--white);
   text-transform: uppercase;
   margin: 1px 0;
 }
@@ -322,14 +316,14 @@ h2 {
 .project-credits { }
 .project-role {
   font-size: 3rem; font-weight: var(--font-weight-heavy);
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   color: var(--color1);
   display: inline;
   line-height: 1.2em;
 }
 .project-name {
   font-size: 3rem; font-weight: var(--font-weight-heavy);
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   color: var(--white);
   margin-left: 1rem;
   display: inline;
@@ -338,14 +332,14 @@ h2 {
 
 .project-label { 
   font-family: Arial, sans-serif; font-size: 3rem; color: var(--color2);
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #6a6ff5;
-  text-align: center; text-transform: ;
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: #6a6ff5;
+  text-align: center;
   line-height: 1.7em;
 }
 .project-label h6 {
   font-family: Arial, sans-serif; font-size: 4rem; color: var(--color2);
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: #6a6ff5;
-  text-align: center; text-transform: ; 
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: #6a6ff5;
+  text-align: center;  
 }
 .project-label span {
   background-color: transparent;
@@ -358,7 +352,7 @@ h2 {
   left: 20px;
   font-size: 4em;
   color: var(--white);
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: var(--wtsw);
   -webkit-text-stroke-color: var(--black);
   letter-spacing: -6px;
   z-index: 1000;
@@ -368,8 +362,7 @@ h2 {
 }
 .back-arrow a {
   color: var(--white);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
 }
 .back-arrow:hover {
   color: var(--black);
@@ -414,7 +407,7 @@ h2 {
 }
 .close:hover {
   background-color: transparent;
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   color: var(--color1);
 }
 .prev, .next {
@@ -432,12 +425,12 @@ h2 {
 .next { right: 10px; }
 .prev:hover {
   background-color: transparent;
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   color: var(--color2);
 }
 .next:hover {
   background-color: transparent;
-  -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   color: var(--color2);
 }
 
@@ -464,6 +457,7 @@ h2 {
     --font-smaller: 1.2rem;
     --font-tiny: 1rem;
     --font-super-tiny: 0.5rem;
+    --wtsw: 1px;
   }
 
   .site-header, nav ul {
@@ -566,5 +560,11 @@ h2 {
     font-size: 3rem;
     top: 10px;
     right: 10px;
+  }
+  h1, h2, h3, h4, a, .hero p, .hero .auto-input, 
+  .description a, 
+  .project-role, .project-name, .project-label, 
+  .back-arrow {
+    -webkit-text-stroke-width: 0.5px !important;
   }
 }
