@@ -10,9 +10,6 @@
 </head>
 <body>
   <main>
-    <a href="../projekte.html" class="back-arrow" aria-label="Zurück">
-      &#129104
-    </a>
     <div class="topnav"> <a href="#home" class="active"></a>
       <div id="links">
         <a href="../vita.html">Vita</a>
@@ -39,19 +36,22 @@ Stoppen uns. Bringen uns vom Weg ab. Werfen uns aus der Bahn.
 Welche Bahn?
       </p>
        <ul class="project-wrapper">
-    
-        <li class="large"><img src="../../img/wenn_ich_jetzt_stehen_bleibe/12.jpg" alt="3"></l>
-        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/3.jpg" alt="3"></l>
-        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/14.jpg" alt="3"></l>
-        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/1.jpg" alt="3"></l>
-       
-        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/15.jpg" alt="3"></l>
-        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/20.jpg" alt="3"></l>
-        <li class="large"><img src="../../img/wenn_ich_jetzt_stehen_bleibe/7.jpg" alt="3"></l>
-          <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/23.jpg" alt="3"></l>
-         <li class="large"><img src="../../img/wenn_ich_jetzt_stehen_bleibe/21.jpg" alt="3"></l>
-
+        <li class="large"><img src="../../img/wenn_ich_jetzt_stehen_bleibe/12.jpg" alt="3" onclick="openSlideshow(0)"></li>
+        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/3.jpg" alt="3" onclick="openSlideshow(1)"></li>
+        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/14.jpg" alt="3" onclick="openSlideshow(2)"></li>
+        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/1.jpg" alt="3" onclick="openSlideshow(3)"></li>
+        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/15.jpg" alt="3" onclick="openSlideshow(4)"></li>
+        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/20.jpg" alt="3" onclick="openSlideshow(5)"></li>
+        <li class="large"><img src="../../img/wenn_ich_jetzt_stehen_bleibe/7.jpg" alt="3" onclick="openSlideshow(6)"></li>
+        <li><img src="../../img/wenn_ich_jetzt_stehen_bleibe/23.jpg" alt="3" onclick="openSlideshow(7)"></li>
+        <li class="large"><img src="../../img/wenn_ich_jetzt_stehen_bleibe/21.jpg" alt="3" onclick="openSlideshow(8)"></li>
        </ul>
+       <div id="slideshowModal" class="modal" onclick="closeSlideshow()">
+         <span class="close">&times;</span>
+         <img class="modal-content" id="modalImage">
+         <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+         <div class="next" onclick="changeSlide(1)">&#10095;</div>
+       </div>
       <p></p>        
        <div class="project-credits">
         <div class="project-role">Mit</div>
@@ -94,10 +94,52 @@ Welche Bahn?
         <div class="project-name">Jeannette Scholz</div>
       </div>
     </div>
+    <a href="../projekte.html" class="back-arrow" aria-label="Zurück">
+      &#10132;
+    </a>
   </main>
   <footer class="site-footer">
     <p>&copy; 2025 Hanna Zeyer</p>
   </footer>
   <script src="../../js/main.js" type="text/javascript"></script>
+    <script>
+    const images = [
+        "../../img/wenn_ich_jetzt_stehen_bleibe/12.jpg",
+        "../../img/wenn_ich_jetzt_stehen_bleibe/3.jpg", 
+        "../../img/wenn_ich_jetzt_stehen_bleibe/14.jpg",
+        "../../img/wenn_ich_jetzt_stehen_bleibe/1.jpg", 
+        "../../img/wenn_ich_jetzt_stehen_bleibe/15.jpg",
+        "../../img/wenn_ich_jetzt_stehen_bleibe/20.jpg",
+        "../../img/wenn_ich_jetzt_stehen_bleibe/7.jpg", 
+        "../../img/wenn_ich_jetzt_stehen_bleibe/23.jpg",
+        "../../img/wenn_ich_jetzt_stehen_bleibe/21.jpg"
+    ];
+    let currentIndex = 0;
+
+    function openSlideshow(index) {
+      event.stopPropagation();
+      currentIndex = index;
+      document.getElementById("modalImage").src = images[index];
+      document.getElementById("slideshowModal").style.display = "block";
+    }
+
+    function closeSlideshow() {
+      document.getElementById("slideshowModal").style.display = "none";
+    }
+
+    function changeSlide(direction) {
+      event.stopPropagation();
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      document.getElementById("modalImage").src = images[currentIndex];
+    }
+
+    document.addEventListener("keydown", function(e) {
+      if (document.getElementById("slideshowModal").style.display === "block") {
+        if (e.key === "ArrowRight") changeSlide(1);
+        if (e.key === "ArrowLeft") changeSlide(-1);
+        if (e.key === "Escape") closeSlideshow();
+      }
+    });
+    </script>
 </body>
 </html>

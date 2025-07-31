@@ -31,17 +31,22 @@
 Im Zentrum steht eine fiktive Behörde, bei der Menschen ihre Wünsche einreichen können. Im Zentrum steht eine fiktive Behörde, bei der Menschen ihre Wünsche einreichen können – vom Weltfrieden bis zum perfekten Lächeln.  Doch wer sitzt in dieser Behörde? Wer entscheidet, was erfüllt wird? Und was passiert, wenn ein Wunsch abgelehnt wird?
       </p>
        <ul class="project-wrapper">
-        <li class="large"><img src="../../img/wunschbehoerde/1.jpg" alt="3"></l>
-        <li><img src="../../img/wunschbehoerde/3.jpg" alt="3"></l>
-        <li><img src="../../img/wunschbehoerde/2.jpg" alt="3"></l>
-        <li><img src="../../img/wunschbehoerde/4.jpg" alt="3"></l>
-        <li><img src="../../img/wunschbehoerde/5.jpg" alt="3"></l>
-        <li><img src="../../img/wunschbehoerde/7.jpg" alt="3"></l>
-        <li><img src="../../img/wunschbehoerde/6.jpg" alt="3"></l>
-        <li><img src="../../img/wunschbehoerde/8.jpg" alt="3"></l>
-        <li class="large"><img src="../../img/wunschbehoerde/9.jpg" alt="3"></l>
-
+        <li class="large"><img src="../../img/wunschbehoerde/1.JPG" alt="3" onclick="openSlideshow(0)"></li>
+        <li><img src="../../img/wunschbehoerde/3.JPG" alt="3" onclick="openSlideshow(1)"</li>
+        <li><img src="../../img/wunschbehoerde/2.JPG" alt="3" onclick="openSlideshow(2)"</li>
+        <li><img src="../../img/wunschbehoerde/4.JPG" alt="3" onclick="openSlideshow(3)"</li>
+        <li><img src="../../img/wunschbehoerde/5.JPG" alt="3" onclick="openSlideshow(4)"</li>
+        <li><img src="../../img/wunschbehoerde/7.JPG" alt="3" onclick="openSlideshow(5)"</li>
+        <li><img src="../../img/wunschbehoerde/6.JPG" alt="3" onclick="openSlideshow(6)"</li>
+        <li><img src="../../img/wunschbehoerde/8.JPG" alt="3" onclick="openSlideshow(7)"</li>
+        <li class="large"><img src="../../img/wunschbehoerde/9.JPG" alt="3" onclick="openSlideshow(8)"></li>
        </ul>
+       <div id="slideshowModal" class="modal" onclick="closeSlideshow()">
+         <span class="close">&times;</span>
+         <img class="modal-content" id="modalImage">
+         <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+         <div class="next" onclick="changeSlide(1)">&#10095;</div>
+       </div>
       <p></p>   
       <div class="project-credits">
         <div class="project-role">Mit</div>
@@ -73,5 +78,44 @@ Im Zentrum steht eine fiktive Behörde, bei der Menschen ihre Wünsche einreiche
     <p>&copy; 2025 Hanna Zeyer</p>
   </footer>
   <script src="../../js/main.js" type="text/javascript"></script>
+  <script>
+  const images = [
+        "../../img/wunschbehoerde/1.JPG",
+        "../../img/wunschbehoerde/3.JPG",
+        "../../img/wunschbehoerde/2.JPG",
+        "../../img/wunschbehoerde/4.JPG",
+        "../../img/wunschbehoerde/5.JPG",
+        "../../img/wunschbehoerde/7.JPG",
+        "../../img/wunschbehoerde/6.JPG",
+        "../../img/wunschbehoerde/8.JPG",
+        "../../img/wunschbehoerde/9.JPG"
+  ];
+  let currentIndex = 0;
+
+  function openSlideshow(index) {
+    event.stopPropagation();
+    currentIndex = index;
+    document.getElementById("modalImage").src = images[index];
+    document.getElementById("slideshowModal").style.display = "block";
+  }
+
+  function closeSlideshow() {
+    document.getElementById("slideshowModal").style.display = "none";
+  }
+
+  function changeSlide(direction) {
+    event.stopPropagation();
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    document.getElementById("modalImage").src = images[currentIndex];
+  }
+
+  document.addEventListener("keydown", function(e) {
+    if (document.getElementById("slideshowModal").style.display === "block") {
+      if (e.key === "ArrowRight") changeSlide(1);
+      if (e.key === "ArrowLeft") changeSlide(-1);
+      if (e.key === "Escape") closeSlideshow();
+    }
+  });
+  </script>
 </body>
 </html>
