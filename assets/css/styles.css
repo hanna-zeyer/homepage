@@ -352,7 +352,12 @@ h2 {
   background-color: transparent;
 }
 
+@font-face {
+  font-family: 'Symbola';
+  src: url('./fonts/Symbola.woff2') format('woff2'); /* Make sure you host the font */
+}
 .back-arrow {
+  font-family: 'Symbola', sans-serif;
   position: absolute;
   top: 0;
   left: 40px;
