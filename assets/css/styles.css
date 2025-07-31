@@ -107,16 +107,24 @@ nav a {
   -webkit-text-stroke-width:var(--wtsw); -webkit-text-stroke-color: var(--black); 
   font-size: var(--font-smaller);
   color: var(--color2);
-}
-.description a.site {
-  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black); 
-  font-size: var(--font-smaller);
-  color: var(--color2);
+  font-weight: var(--font-weight-heavy);
 }
 .description p {
   color: var(--black);
   font-size: var(--font-tiny);
   font-weight: var(--font-weight-light);
+}
+.description a.site {
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black); 
+  font-size: var(--font-smaller);
+  color: var(--color2);
+  font-weight: var(--font-weight-heavy);
+}
+.description a.email:hover {
+  color: var(--black);
+}
+.description a.site:hover {
+  color: var(--black);
 }
 
 h3 {
