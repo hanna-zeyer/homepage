@@ -569,10 +569,16 @@ h2 {
     top: 10px;
     right: 10px;
   }
+
+  .topnav a.icon {
+    right: 1rem;  /* push it in */
+    top: 0.5rem;  /* optional */
+  }
+
   h1, h2, h3, h4, a, .hero p, .hero .auto-input, 
   .description a, 
   .project-role, .project-name, .project-label, 
   .back-arrow {
-    -webkit-text-stroke-width: 0.5px !important;
+  -webkit-text-stroke-width: 0.5px !important;
   }
 }
