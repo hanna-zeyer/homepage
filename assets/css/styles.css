@@ -84,16 +84,18 @@ nav ul {
   display: flex;
   gap: 2rem;
   font-weight: bolder;
+  font-size: var(--font-mid);
 }
 
 nav a {
   color: var(--white);
   text-transform: uppercase;
-  font-size: 0.9rem; font-weight: var(--font-weight);
+  /*font-size: 0.9rem; font-weight: var(--font-weight);*/
+  font-size: var(--font-mid); font-weight: var(--font-weight-heavy);
 }
 
 .description {
-  font-size: var(--font-small); font-weight: var(--font-weight);
+  font-size: var(--font-small); font-weight: var(--font-weight-heavy);
   padding: 2rem 4rem 3rem;
   margin-top: 5%;
 }
