@@ -31,7 +31,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
+  }
 
 .hero {
   padding: 3rem 2rem 3rem;
@@ -107,16 +107,24 @@ nav a {
   -webkit-text-stroke-width:var(--wtsw); -webkit-text-stroke-color: var(--black); 
   font-size: var(--font-smaller);
   color: var(--color2);
-}
-.description a.site {
-  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black); 
-  font-size: var(--font-smaller);
-  color: var(--color2);
+  font-weight: var(--font-weight-heavy);
 }
 .description p {
   color: var(--black);
   font-size: var(--font-tiny);
   font-weight: var(--font-weight-light);
+}
+.description a.site {
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black); 
+  font-size: var(--font-smaller);
+  color: var(--color2);
+  font-weight: var(--font-weight-heavy);
+}
+.description a.email:hover {
+  color: var(--black);
+}
+.description a.site:hover {
+  color: var(--black);
 }
 
 h3 {
@@ -488,8 +496,10 @@ h2 {
   }
 
   .about-image img {
-    width: 100%;
-    height: auto;
+    width: 180px;
+    height: 280px;
+    object-fit: cover;
+    padding: 6px;
   }
 
   .about-text {
@@ -507,6 +517,7 @@ h2 {
   .project-container h1,
   .project-container h2,
   .project-container h4,
+  .project-container h6,
   .project-label {
     font-size: var(--font-mid);
   }
@@ -561,10 +572,16 @@ h2 {
     top: 10px;
     right: 10px;
   }
+
+  .topnav a.icon {
+    right: 1rem;  /* push it in */
+    top: 0.5rem;  /* optional */
+  }
+
   h1, h2, h3, h4, a, .hero p, .hero .auto-input, 
   .description a, 
   .project-role, .project-name, .project-label, 
   .back-arrow {
-    -webkit-text-stroke-width: 0.5px !important;
+  -webkit-text-stroke-width: 0.5px !important;
   }
 }
