@@ -168,7 +168,12 @@
   */
 
   article.post {
+    /*
     height: 300px;
+    */
+    height: auto;
+    border-top: 1px solid var(--black);   /* thinner border */
+    border-bottom: 1px solid var(--black); /* thinner border */
   }
 
   html, body {
@@ -189,12 +194,12 @@
     padding-top: 1rem; /* or whatever value fits visually */
   }
 
-.title-link {
-  font-size: clamp(1rem, 4vw, 1.5rem);
-  white-space: normal;
-  line-height: 1.3;
-  word-break: break-word;
-}
+  .title-link {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    white-space: normal;
+    line-height: 1.3;
+    word-break: break-word;
+  }
 
   .highlighted-text {
     font-size: 1rem;
