@@ -150,10 +150,9 @@
     flex-direction: column;
     height: auto;
     margin: 2rem 0;
-    border: none;
-    align-items: center; /* centers children horizontally */
     border-top: 1px solid var(--black);
     border-bottom: 1px solid var(--black);
+    align-items: stretch; /* stretch children horizontally */
   }
 
   article.post:nth-child(even) {
@@ -161,10 +160,10 @@
   }
 
   article.post .image-link {
-    width: 100%;
-  /*  max-width: 500px;  optional: limit width for better aesthetics */
-    max-width: none;
-    aspect-ratio: 4 / 3;
+    width: 100vw;          /* take full viewport width */
+    margin-left: -1rem;    /* adjust if parent has padding */
+    margin-right: -1rem;
+    aspect-ratio: 16 / 9;
     display: block;
   }
 
@@ -177,13 +176,13 @@
 
   article.post .post-content {
     width: 100%;
-    max-width: 500px; /* match image */
     padding: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* center text horizontally */
-    text-align: center; /* center text alignment */
-    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
     border: none;
   }
 
