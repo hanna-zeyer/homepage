@@ -159,13 +159,14 @@
     flex-direction: column !important;
   }
 
-  article.post .image-link {
-    width: 100vw;          /* take full viewport width */
-    margin-left: -1rem;    /* adjust if parent has padding */
-    margin-right: -1rem;
-    aspect-ratio: 16 / 9;
-    display: block;
-  }
+article.post .image-link {
+  width: 100vw;
+  aspect-ratio: 16 / 9;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
   article.post .image-link img {
     width: 100%;
