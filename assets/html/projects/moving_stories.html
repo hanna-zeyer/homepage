@@ -78,9 +78,14 @@
 
     function openSlideshow(index) {
       event.stopPropagation();
-      currentIndex = index;
-      document.getElementById("modalImage").src = images[index];
-      document.getElementById("slideshowModal").style.display = "block";
+
+      if (images[index]) {
+        currentIndex = index;
+        const modal = document.getElementById("slideshowModal");
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = images[index];
+        modal.style.display = "flex"; // <- now using flex
+      }
     }
 
     function closeSlideshow() {
