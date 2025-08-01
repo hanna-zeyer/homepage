@@ -153,6 +153,10 @@
     border: none;
   }
 
+  article.post:nth-child(even) {
+    flex-direction: column !important;
+  }
+
   article.post .image-link {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -170,7 +174,7 @@
     padding: 1rem;
     justify-content: flex-start;
     text-align: left;
-    border: none; /* removes top border */
+    border: none;
   }
 
   .title-link {
