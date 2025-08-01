@@ -437,6 +437,7 @@ h2 {
   cursor: pointer;
   position: absolute;
   color: var(--white);
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   user-select: none;
   padding: 10px;
   background-color: transparent;
