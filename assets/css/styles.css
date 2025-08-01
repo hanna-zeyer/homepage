@@ -494,7 +494,6 @@ h2 {
     font-size: var(--font-tiny);
   }
 
-  /*
   .about_ {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -507,7 +506,6 @@ h2 {
     object-fit: cover;
     padding: 6px;
   }
-  */
 
   .about-text {
     font-size: var(--font-smaller);
