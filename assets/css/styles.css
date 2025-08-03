@@ -604,6 +604,7 @@ h2 {
   .topnav a.icon {
     right: 1rem;  /* push it in */
     top: 0.5rem;  /* optional */
+    font-size: 4rem;
   }
 
   h1, h2, h3, h4, a, .hero p, .hero .auto-input, 
