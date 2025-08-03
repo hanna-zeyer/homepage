@@ -580,7 +580,7 @@ h2 {
   }
 
   .project-container p {
-    font-size: var(--font-tiny);
+    font-size: var(--font-smaller);
     margin: 1rem 0;
   }
 
