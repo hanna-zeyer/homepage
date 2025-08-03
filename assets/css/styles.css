@@ -497,24 +497,19 @@ h2 {
   }
 
   .hero h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.2;
   }
 
   .description {
     padding: 1rem;
     margin-top: 2%;
-    font-size: 3rem;
     line-height: 1.2;
-  }
-
-  .description a {
-    font-size: 3rem;
   }
 
   .description a.email,
   .description a.site {
-    font-size: 3rem;
+    font-size: 1rem;
   }
 
   .description div {
@@ -578,7 +573,7 @@ h2 {
     font-size: 2rem;
   }
   .project-label h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     line-height: 1.2;
     overflow-wrap: break-word;  /* allow wrapping */
     word-break: break-word;
