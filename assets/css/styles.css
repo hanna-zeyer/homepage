@@ -513,8 +513,16 @@ h2 {
   }
 
   .description a.email,
-  .description a.site, {
+  .description a.site {
     font-size: 3rem;
+  }
+
+  .description div {
+    margin-bottom: 0.5rem;  /* or adjust as needed */
+  }
+
+  .description div:last-child {
+    margin-bottom: 0;  /* prevent extra space at end */
   }
 
   .about_ {
@@ -572,6 +580,9 @@ h2 {
   .project-label h1 {
     font-size: 2.5rem;
     line-height: 1.2;
+    overflow-wrap: break-word;  /* allow wrapping */
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .project-role,
