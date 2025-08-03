@@ -505,12 +505,14 @@ h2 {
   .description {
     padding: 1rem;
     margin-top: 2%;
-    font-size: var(--font-smaller);
+    font-size: 2rem;
   }
 
+  /*
   .description a {
     font-size: 2rem;
   }
+  */
 
   .about_ {
     grid-template-columns: 1fr;
@@ -556,7 +558,8 @@ h2 {
     font-size: 2rem;
   }
   .project-label h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
 
   .project-role,
