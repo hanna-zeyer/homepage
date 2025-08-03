@@ -569,7 +569,7 @@ h2 {
     font-size: 2rem;
   }
   .project-label h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 1.2;
     overflow-wrap: break-word;  /* allow wrapping */
     word-break: break-word;
@@ -580,6 +580,10 @@ h2 {
   .project-name {
     font-size: var(--font-small);
   }
+  .project-name {
+    margin-left: .5rem;
+  }
+
 
   .project-container p {
     font-size: var(--font-smaller);
