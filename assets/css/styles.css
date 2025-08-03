@@ -607,17 +607,6 @@ h2 {
     font-size: 4rem;
   }
 
-  #links {
-    display: flex;
-    flex-direction: column;
-    gap: 0rem; 
-
-  #links a {
-    padding: 0.2rem 0;
-    font-size: var(--font-mid);
-    line-height: 1.2; 
-  }
-
   h1, h2, h3, h4, a, .hero p, .hero .auto-input, 
   .description a, 
   .project-role, .project-name, .project-label, 
