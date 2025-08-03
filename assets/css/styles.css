@@ -497,6 +497,10 @@ h2 {
     padding: 1.5rem 1rem;
   }
 
+  .hero h1 {
+    font-size: 4rem;
+  }
+
   .description {
     padding: 1rem;
     margin-top: 2%;
@@ -602,8 +606,8 @@ h2 {
   }
 
   .topnav a.icon {
-    right: 1rem;  /* push it in */
-    top: 0.5rem;  /* optional */
+    right: 1rem;  
+    top: 0.5rem;
     font-size: 4rem;
   }
 
