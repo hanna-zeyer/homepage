@@ -504,11 +504,11 @@ h2 {
   .description {
     padding: 1rem;
     margin-top: 2%;
-    font-size: 3rem;
+    font-size: 3em;
   }
 
   .description a {
-    font-size: 3rem;
+    font-size: 3em;
   }
 
   .description a.email,
@@ -539,20 +539,19 @@ h2 {
     align-items: center;
     gap: 1rem;
   }
-
   .about-text {
     font-size: var(--font-smaller);
   }
-.about-container {
-  padding: 1rem;
-  max-width: 100%;
-}
-.about-text {
-  font-size: var(--font-smaller);
-  width: 100%;
-  padding: 0;        /* Remove any side padding */
-  margin: 0;         /* Optional: remove margin */
-}
+  .about-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  .about-text {
+    font-size: var(--font-smaller);
+    width: 100%;
+    padding: 0;        /* Remove any side padding */
+    margin: 0;         /* Optional: remove margin */
+  }
 
   .project-container {
     padding: 2rem 1rem;
