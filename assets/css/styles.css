@@ -340,13 +340,13 @@ h2 {
 
 .project-label { 
   font-family: Arial, sans-serif; font-size: 3rem; color: var(--color2);
-  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: #6a6ff5;
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--color1);
   text-align: center;
   line-height: 1.7em;
 }
 .project-label h6 {
   font-family: Arial, sans-serif; font-size: 4rem; color: var(--color2);
-  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: #6a6ff5;
+  -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--color1);
   text-align: center;  
 }
 .project-label span {
@@ -520,6 +520,7 @@ h2 {
 
   .about-image img {
     object-fit: cover;
+    aspect-ratio: 1/1;
     /*
     padding: 6px;
     width: 180px; height: 280px;
@@ -547,12 +548,15 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .project-container h1,
-  .project-container h2,
-  .project-container h4,
-  .project-container h6,
-  .project-label {
-    font-size: var(--font-mid);
+  .project-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-label h6 {
+    font-size: 2rem;
+  }
+  .project-label h1 {
+    font-size: 3.5rem;
   }
 
   .project-role,
