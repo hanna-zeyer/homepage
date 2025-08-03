@@ -505,6 +505,10 @@ h2 {
     padding: 1rem;
     margin-top: 2%;
     line-height: 1.2;
+  }
+
+  .description a.site,
+  .description a.email {
     font-size: 2rem;
   }
 
