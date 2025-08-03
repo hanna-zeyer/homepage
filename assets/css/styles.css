@@ -508,11 +508,9 @@ h2 {
     font-size: 2rem;
   }
 
-  /*
   .description a {
     font-size: 2rem;
   }
-  */
 
   .about_ {
     grid-template-columns: 1fr;
