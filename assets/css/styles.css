@@ -230,7 +230,6 @@ h2 {
 }
 
 .about-text {
-    font-family: Arial, sans-serif;
     font-size: 2rem;
     flex: 1;
 }
@@ -514,7 +513,7 @@ h2 {
 
   .description a.email,
   .description a.site, {
-    font-size: 3rem;
+    font-size: 3em;
   }
 
   .about_ {
