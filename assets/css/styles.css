@@ -499,6 +499,7 @@ h2 {
 
   .hero h1 {
     font-size: 4rem;
+    line-height: 1.2;
   }
 
   .description {
@@ -609,6 +610,17 @@ h2 {
     right: 1rem;  
     top: 0.5rem;
     font-size: 4rem;
+  }
+
+  #links {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem; 
+
+  #links a {
+    padding: 0.2rem 0;
+    font-size: var(--font-mid);
+    line-height: 1.2; 
   }
 
   h1, h2, h3, h4, a, .hero p, .hero .auto-input, 
