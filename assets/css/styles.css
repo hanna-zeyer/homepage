@@ -505,16 +505,16 @@ h2 {
   .description {
     padding: 1rem;
     margin-top: 2%;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .description a {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .description a.email,
   .description a.site, {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .about_ {
