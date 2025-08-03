@@ -509,7 +509,7 @@ h2 {
   }
 
   .description a {
-    font-size: var(--font-tiny);
+    font-size: 2rem;
   }
 
   .about_ {
