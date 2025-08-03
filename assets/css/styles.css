@@ -497,23 +497,24 @@ h2 {
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     line-height: 1.2;
   }
 
   .description {
     padding: 1rem;
     margin-top: 2%;
-    font-size: 3em;
+    font-size: 3rem;
+    line-height: 1.2;
   }
 
   .description a {
-    font-size: 3em;
+    font-size: 3rem;
   }
 
   .description a.email,
   .description a.site, {
-    font-size: 3em;
+    font-size: 3rem;
   }
 
   .about_ {
