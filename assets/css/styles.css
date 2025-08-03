@@ -512,6 +512,11 @@ h2 {
     font-size: 2rem;
   }
 
+  .description a.email,
+  .description a.site, {
+    font-size: 2rem;
+  }
+
   .about_ {
     grid-template-columns: 1fr;
     gap: 2rem;
