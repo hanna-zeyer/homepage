@@ -151,9 +151,13 @@
     height: auto;
     margin: 2rem 0;
     border: none;
-    align-items: center; /* centers children horizontally */
+    align-items: stretch; /* centers children horizontally */
     border-top: 1px solid var(--black);
     border-bottom: 1px solid var(--black);
+  }
+
+  article.post:nth-child(even) {
+    flex-direction: column !important;
   }
 
   article.post .image-link {
@@ -164,7 +168,7 @@
 
   article.post .image-link img {
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
     display: block;
   }
 
