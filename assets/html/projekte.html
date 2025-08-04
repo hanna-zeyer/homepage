@@ -162,15 +162,15 @@
 
   article.post .image-link {
     width: 100vw;
-    height: auto;
     margin: 0;         
     padding: 0;
-    overflow: hidden; 
-    aspect-ratio: 1 / 1;
     display: block;
     /*
     width: 100%;
     max-width: 500px; 
+    aspect-ratio: 1 / 1;
+    overflow: hidden; 
+    height: auto;
     */
   }
 
@@ -189,13 +189,16 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center; /* center text horizontally */
-    text-align: center; /* center text alignment */
     justify-content: flex-start;
     border: none;
+    box-sizing: border-box;
+    text-align: left;
+    align-items: flex-start
     /*
     width: 100%;
     max-width: 500px; 
+    align-items: center; 
+    text-align: center; 
     */
   }
 
