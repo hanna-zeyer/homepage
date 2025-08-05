@@ -327,12 +327,12 @@ h2 {
   color: var(--color1);
   display: inline;
   line-height: 1.2em;
+  margin-right: 1rem;
 }
 .project-name {
   font-size: 3rem; font-weight: var(--font-weight-heavy);
   -webkit-text-stroke-width: var(--wtsw); -webkit-text-stroke-color: var(--black);
   color: var(--white);
-  margin-left: 1rem;
   display: inline;
   line-height: 1.2em;
 }
@@ -566,14 +566,16 @@ h2 {
   }
 
   .project-container h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.2;
   }
 
   .project-label h6 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
   }
   .project-label h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1.2;
     overflow-wrap: break-word;  /* allow wrapping */
     word-break: break-word;
@@ -584,8 +586,8 @@ h2 {
   .project-name {
     font-size: var(--font-small);
   }
-  .project-name {
-    margin-left: .5rem;
+  .project-role {
+    margin-right: .5rem;
   }
 
 
