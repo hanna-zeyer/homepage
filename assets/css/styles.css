@@ -492,7 +492,7 @@ h2 {
   }
 
   .hero {
-    margin-top: 4%;
+    margin-top: 7%;
     padding: 1.5rem 1rem;
   }
 
@@ -513,11 +513,11 @@ h2 {
   }
 
   .description div {
-    margin-bottom: 0.5rem;  /* or adjust as needed */
+    margin-bottom: 0.5rem;  
   }
 
   .description div:last-child {
-    margin-bottom: 0;  /* prevent extra space at end */
+    margin-bottom: 0;  
   }
 
   .about_ {
