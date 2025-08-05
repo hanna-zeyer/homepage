@@ -173,11 +173,19 @@
   }
 */
 
-  article.post .image-link {}
-
+  body {
+    overflow-x: hidden;
+  }
+  article.post .image-link {
+    width: 100vw;    
+    height: 60vh;    
+    display: block;
+  }
   article.post .image-link img {
     width: 100%;
+    height: 100%;
     display: block;
+    object-fit: cover;
   }
 
   article.post .post-content {
