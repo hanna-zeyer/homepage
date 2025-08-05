@@ -130,7 +130,7 @@
     }
 
     document.addEventListener("keydown", function(e) {
-      if (document.getElementById("slideshowModal").style.display === "block") {
+      if (document.getElementById("slideshowModal").style.display === "flex") {
         if (e.key === "ArrowRight") changeSlide(1);
         if (e.key === "ArrowLeft") changeSlide(-1);
         if (e.key === "Escape") closeSlideshow();

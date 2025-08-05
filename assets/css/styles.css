@@ -492,7 +492,7 @@ h2 {
   }
 
   .hero {
-    margin-top: 20%;
+    margin-top: 25%;
     padding: 1.5rem 1rem;
   }
 
@@ -605,8 +605,11 @@ h2 {
   }
 
   .back-arrow {
+    /*
     font-size: 2.5rem;
     left: 10px;
+    */
+    display: none;
   }
 
   .topnav a {
