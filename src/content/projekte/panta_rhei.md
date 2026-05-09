@@ -4,7 +4,7 @@ genre: "Performance"
 ort: "Palucca Hochschule für Tanz im Labortheater HfBK Dresden, Dresden 2020"
 coverImg: "img/panta_rhei/02.webp"
 coverAlt: ""
-reihenfolge: 14
+reihenfolge: 13
 bilder:
   - src: "img/panta_rhei/02.webp"
     alt: ""
