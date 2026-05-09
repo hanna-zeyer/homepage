@@ -2,3 +2,6 @@
 ./go22dos
 _.go22dos
 .DS_Store
+node_modules/
+dist/
+.astro/

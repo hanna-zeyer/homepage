@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="HANNA ZEYER">
+  <section class="hero">
+    <h1>HANNA ZEYER</h1>
+    <span class="auto-input"></span>
+  </section>
+</BaseLayout>
+
+<script>
+  // @ts-ignore
+  import Typed from 'https://cdn.jsdelivr.net/npm/typed.js@2.0.12/dist/typed.esm.js';
+  new Typed('.auto-input', {
+    strings: [
+      'Bühnen- und Kostümbildnerin',
+      'Inklusive Kunst',
+      'Ally',
+    ],
+    typeSpeed: 100,
+    fadeOut: true,
+    loop: true,
+    showCursor: false,
+  });
+</script>

@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const allProjekte = await getCollection('projekte');
+const sorted = allProjekte.sort((a, b) => a.data.reihenfolge - b.data.reihenfolge);
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Projekte" backHref={base}>
+  <main>
+    {sorted.map(p => (
+      <article class="post">
+        <a href={`${base}projekte/${p.slug}`} class="image-link" aria-label={p.data.title}>
+          <img src={`${base}${p.data.coverImg}`} alt={p.data.coverAlt} />
+        </a>
+        <div class="post-content">
+          <a href={`${base}projekte/${p.slug}`} class="title-link">
+            {p.data.title}
+          </a>
+          <p><span class="highlighted-text">{p.data.ort}</span></p>
+        </div>
+      </article>
+    ))}
+  </main>
+</BaseLayout>

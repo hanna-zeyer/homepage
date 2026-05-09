@@ -1,0 +1,42 @@
+---
+title: "Die Säule geht an der Last vorbei"
+genre: "Ausstellung"
+ort: "Atelier Goldstein, Frankfurt am Main 2022"
+coverImg: "img/die_saeule_geht_an_der_last_vorbei/2.webp"
+coverAlt: ""
+reihenfolge: 10
+bilder:
+  - src: "img/die_saeule_geht_an_der_last_vorbei/2.webp"
+    alt: ""
+    large: true
+  - src: "img/die_saeule_geht_an_der_last_vorbei/20.webp"
+    alt: ""
+  - src: "img/die_saeule_geht_an_der_last_vorbei/19.webp"
+    alt: ""
+  - src: "img/die_saeule_geht_an_der_last_vorbei/5.webp"
+    alt: ""
+    large: true
+  - src: "img/die_saeule_geht_an_der_last_vorbei/8.webp"
+    alt: ""
+  - src: "img/die_saeule_geht_an_der_last_vorbei/10.webp"
+    alt: ""
+    large: true
+  - src: "img/die_saeule_geht_an_der_last_vorbei/17.webp"
+    alt: ""
+    large: true
+  - src: "img/die_saeule_geht_an_der_last_vorbei/7.webp"
+    alt: ""
+credits:
+  - rolle: "Künstler*innen"
+    name: "Julius Bockelt, Tina Herchenröther, Julia Krause-Harder, Selbermann, Joel Thottathill"
+  - rolle: "Workshop-Leitung Gintersdorfer/Klaßen"
+    name: "Hauke Heumann, Knut Klaßen, Hanna Zeyer"
+---
+
+*Die Säule geht an der Last vorbei* gehörte zu der
+Veranstaltungsreihe *Über das Fliehen* des <a href="https://www.atelier-goldstein.de/">Atelier Goldstein</a>. Sie
+widmet sich den bildhaften und gedanklichen Aspekten von Flucht als
+kreative Strategie und künstlerische Taktik. In Zusammenarbeit mit
+der Theatergruppe <a href="https://www.gintersdorferklassen.org/ueber/">Gintersdorfer/Klaßen</a> und den bildenden Künstler\*innen des <a href="https://www.atelier-goldstein.de/">Atelier Goldstein</a>
+entstand eine Performance und eine Ausstellung, die anschließend in
+der <a href="https://www.atelier-goldstein.de/goldstein-galerie/">Goldstein Galerie</a> gezeigt wurde.

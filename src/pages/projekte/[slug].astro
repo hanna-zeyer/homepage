@@ -1,0 +1,104 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const projekte = await getCollection('projekte');
+  return projekte.map(p => ({
+    params: { slug: p.slug },
+    props: { projekt: p },
+  }));
+}
+
+const { projekt } = Astro.props;
+const { Content } = await projekt.render();
+const { title, genre, ort, bilder, credits } = projekt.data;
+const base = import.meta.env.BASE_URL;
+
+// Build the images array for the slideshow script
+const imageUrls = bilder.map(b => `${base}${b.src}`);
+---
+
+<BaseLayout title={title} backHref={`${base}projekte`}>
+  <div class="project-container">
+
+    <div class="project-label">
+      <span><h6>{genre}</h6></span>
+      <h1>{title}</h1>
+    </div>
+
+    <h2>{ort}</h2>
+
+    <p><Content /></p>
+
+    {bilder.length > 0 && (
+      <ul class="project-wrapper">
+        {bilder.map((img, i) => (
+          <li class={img.large ? 'large' : ''}>
+            <img
+              src={`${base}${img.src}`}
+              alt={img.alt}
+              loading="lazy"
+              onclick={`openSlideshow(${i})`}
+              style="cursor:zoom-in"
+            />
+          </li>
+        ))}
+      </ul>
+
+      <div id="slideshowModal" class="modal" onclick="closeSlideshow()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" src="" alt="" />
+        <div class="prev" onclick="changeSlide(event, -1)">&#10094;</div>
+        <div class="next" onclick="changeSlide(event, 1)">&#10095;</div>
+      </div>
+    )}
+
+    <p></p>
+
+    {credits.map(c => (
+      <div class="project-credits">
+        <div class="project-role">{c.rolle}</div>
+        <div class="project-name" set:html={c.name} />
+      </div>
+    ))}
+
+  </div>
+</BaseLayout>
+
+<script define:vars={{ imageUrls }}>
+  const images = imageUrls;
+  let currentIndex = 0;
+
+  function openSlideshow(index) {
+    if (!images[index]) return;
+    currentIndex = index;
+    const modal = document.getElementById('slideshowModal');
+    const modalImg = document.getElementById('modalImage');
+    modalImg.src = images[index];
+    modal.style.display = 'flex';
+  }
+
+  function closeSlideshow() {
+    document.getElementById('slideshowModal').style.display = 'none';
+  }
+
+  function changeSlide(event, direction) {
+    event.stopPropagation();
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    document.getElementById('modalImage').src = images[currentIndex];
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (document.getElementById('slideshowModal').style.display === 'flex') {
+      if (e.key === 'ArrowRight') changeSlide(e, 1);
+      if (e.key === 'ArrowLeft')  changeSlide(e, -1);
+      if (e.key === 'Escape')     closeSlideshow();
+    }
+  });
+
+  // expose globally for inline onclick handlers
+  window.openSlideshow = openSlideshow;
+  window.closeSlideshow = closeSlideshow;
+  window.changeSlide = changeSlide;
+</script>

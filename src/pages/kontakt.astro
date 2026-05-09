@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Kontakt" backHref={base}>
+  <section class="description">
+    <div><a href="mailto:hanna.zeyer@hotmail.com" class="email">hanna.zeyer@hotmail.com</a></div>
+    <div><a href={`${base}impressum`} class="site">IMPRESSUM</a></div>
+  </section>
+</BaseLayout>
