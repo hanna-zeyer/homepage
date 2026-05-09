@@ -2,29 +2,29 @@
 title: "Die Säule geht an der Last vorbei"
 genre: "Ausstellung"
 ort: "Atelier Goldstein, Frankfurt am Main 2022"
-coverImg: "img/die_saeule_geht_an_der_last_vorbei/2.JPG"
+coverImg: "img/die_saeule_geht_an_der_last_vorbei/2.webp"
 coverAlt: ""
 reihenfolge: 10
 bilder:
-  - src: "img/die_saeule_geht_an_der_last_vorbei/2.JPG"
+  - src: "img/die_saeule_geht_an_der_last_vorbei/2.webp"
     alt: ""
     large: true
-  - src: "img/die_saeule_geht_an_der_last_vorbei/20.JPG"
+  - src: "img/die_saeule_geht_an_der_last_vorbei/20.webp"
     alt: ""
-  - src: "img/die_saeule_geht_an_der_last_vorbei/19.JPG"
+  - src: "img/die_saeule_geht_an_der_last_vorbei/19.webp"
     alt: ""
-  - src: "img/die_saeule_geht_an_der_last_vorbei/5.JPG"
-    alt: ""
-    large: true
-  - src: "img/die_saeule_geht_an_der_last_vorbei/8.JPG"
-    alt: ""
-  - src: "img/die_saeule_geht_an_der_last_vorbei/10.JPG"
+  - src: "img/die_saeule_geht_an_der_last_vorbei/5.webp"
     alt: ""
     large: true
-  - src: "img/die_saeule_geht_an_der_last_vorbei/17.JPG"
+  - src: "img/die_saeule_geht_an_der_last_vorbei/8.webp"
+    alt: ""
+  - src: "img/die_saeule_geht_an_der_last_vorbei/10.webp"
     alt: ""
     large: true
-  - src: "img/die_saeule_geht_an_der_last_vorbei/7.JPG"
+  - src: "img/die_saeule_geht_an_der_last_vorbei/17.webp"
+    alt: ""
+    large: true
+  - src: "img/die_saeule_geht_an_der_last_vorbei/7.webp"
     alt: ""
 credits:
   - rolle: "Künstler*innen"

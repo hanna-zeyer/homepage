@@ -2,21 +2,21 @@
 title: "Nils Karlsson Däumling"
 genre: "Theaterstück"
 ort: "Sächsische Staatsoper, Dresden 2021"
-coverImg: "img/nils_karlsson/1.jpg"
+coverImg: "img/nils_karlsson/1.webp"
 coverAlt: ""
 reihenfolge: 12
 bilder:
-  - src: "img/nils_karlsson/2.jpg"
+  - src: "img/nils_karlsson/2.webp"
     alt: ""
-  - src: "img/nils_karlsson/1.jpg"
-    alt: ""
-    large: true
-  - src: "img/nils_karlsson/5.jpg"
+  - src: "img/nils_karlsson/1.webp"
     alt: ""
     large: true
-  - src: "img/nils_karlsson/6.jpg"
+  - src: "img/nils_karlsson/5.webp"
     alt: ""
-  - src: "img/nils_karlsson/4.jpg"
+    large: true
+  - src: "img/nils_karlsson/6.webp"
+    alt: ""
+  - src: "img/nils_karlsson/4.webp"
     alt: ""
     large: true
 credits:

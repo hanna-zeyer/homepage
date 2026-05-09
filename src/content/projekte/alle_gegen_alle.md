@@ -2,31 +2,31 @@
 title: "#Alle gegen Alle"
 genre: "Theaterstück"
 ort: "Staatsschauspiel Dresden, Dresden 2024"
-coverImg: "img/alle_gegen_alle/2024_Liebesverbote_3_Mara.jpg"
+coverImg: "img/alle_gegen_alle/2024_Liebesverbote_3_Mara.webp"
 coverAlt: ""
 reihenfolge: 5
 bilder:
-  - src: "img/alle_gegen_alle/2024_Liebesverbote_.jpg"
+  - src: "img/alle_gegen_alle/2024_Liebesverbote_.webp"
     alt: ""
     large: true
-  - src: "img/alle_gegen_alle/15.jpg"
+  - src: "img/alle_gegen_alle/15.webp"
     alt: ""
-  - src: "img/alle_gegen_alle/2.jpg"
-    alt: ""
-    large: true
-  - src: "img/alle_gegen_alle/17.jpg"
-    alt: ""
-  - src: "img/alle_gegen_alle/6.jpg"
-    alt: ""
-  - src: "img/alle_gegen_alle/5.jpg"
+  - src: "img/alle_gegen_alle/2.webp"
     alt: ""
     large: true
-  - src: "img/alle_gegen_alle/2024_Liebesverbote_3_Mara.jpg"
+  - src: "img/alle_gegen_alle/17.webp"
     alt: ""
-  - src: "img/alle_gegen_alle/10.jpg"
+  - src: "img/alle_gegen_alle/6.webp"
+    alt: ""
+  - src: "img/alle_gegen_alle/5.webp"
     alt: ""
     large: true
-  - src: "img/alle_gegen_alle/7.jpg"
+  - src: "img/alle_gegen_alle/2024_Liebesverbote_3_Mara.webp"
+    alt: ""
+  - src: "img/alle_gegen_alle/10.webp"
+    alt: ""
+    large: true
+  - src: "img/alle_gegen_alle/7.webp"
     alt: ""
     large: true
 credits:

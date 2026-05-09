@@ -2,15 +2,15 @@
 title: "Panta Rhei"
 genre: "Performance"
 ort: "Palucca Hochschule für Tanz im Labortheater HfBK Dresden, Dresden 2020"
-coverImg: "img/panta_rhei/02.jpg"
+coverImg: "img/panta_rhei/02.webp"
 coverAlt: ""
 reihenfolge: 14
 bilder:
-  - src: "img/panta_rhei/02.jpg"
+  - src: "img/panta_rhei/02.webp"
     alt: ""
-  - src: "img/panta_rhei/01.jpg"
+  - src: "img/panta_rhei/01.webp"
     alt: ""
-  - src: "img/panta_rhei/03.jpg"
+  - src: "img/panta_rhei/03.webp"
     alt: ""
 credits:
   - rolle: "Konzept"

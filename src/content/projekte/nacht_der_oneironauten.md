@@ -2,29 +2,29 @@
 title: "Nacht der Oneironauten"
 genre: "Performance"
 ort: "Rosenwerk, Dresden 2023"
-coverImg: "img/nacht_der_oneironauten/02.jpg"
+coverImg: "img/nacht_der_oneironauten/02.webp"
 coverAlt: ""
 reihenfolge: 7
 bilder:
-  - src: "img/nacht_der_oneironauten/4.jpg"
+  - src: "img/nacht_der_oneironauten/4.webp"
     alt: ""
-  - src: "img/nacht_der_oneironauten/1.jpg"
+  - src: "img/nacht_der_oneironauten/1.webp"
     alt: ""
-  - src: "img/nacht_der_oneironauten/9.jpg"
-    alt: ""
-    large: true
-  - src: "img/nacht_der_oneironauten/2.jpg"
-    alt: ""
-  - src: "img/nacht_der_oneironauten/17.jpg"
+  - src: "img/nacht_der_oneironauten/9.webp"
     alt: ""
     large: true
-  - src: "img/nacht_der_oneironauten/18.jpg"
+  - src: "img/nacht_der_oneironauten/2.webp"
     alt: ""
-  - src: "img/nacht_der_oneironauten/8.jpg"
+  - src: "img/nacht_der_oneironauten/17.webp"
     alt: ""
-  - src: "img/nacht_der_oneironauten/21.jpg"
+    large: true
+  - src: "img/nacht_der_oneironauten/18.webp"
     alt: ""
-  - src: "img/nacht_der_oneironauten/5.jpg"
+  - src: "img/nacht_der_oneironauten/8.webp"
+    alt: ""
+  - src: "img/nacht_der_oneironauten/21.webp"
+    alt: ""
+  - src: "img/nacht_der_oneironauten/5.webp"
     alt: ""
     large: true
 credits:

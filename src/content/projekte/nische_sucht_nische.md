@@ -2,19 +2,19 @@
 title: "Nische sucht Nische!"
 genre: "Ausstellung"
 ort: "Galeriespaziergang, Dresden 2025"
-coverImg: "img/nische_sucht_nische/98.jpg"
+coverImg: "img/nische_sucht_nische/98.webp"
 coverAlt: ""
 reihenfolge: 3
 bilder:
-  - src: "img/nische_sucht_nische/7.jpg"
+  - src: "img/nische_sucht_nische/7.webp"
     alt: ""
-  - src: "img/nische_sucht_nische/4.jpg"
-    alt: ""
-    large: true
-  - src: "img/nische_sucht_nische/5.jpg"
+  - src: "img/nische_sucht_nische/4.webp"
     alt: ""
     large: true
-  - src: "img/nische_sucht_nische/6.jpg"
+  - src: "img/nische_sucht_nische/5.webp"
+    alt: ""
+    large: true
+  - src: "img/nische_sucht_nische/6.webp"
     alt: ""
 credits:
   - rolle: "Künstler*innen"

@@ -2,24 +2,24 @@
 title: "Moving Stories"
 genre: "Theaterstück"
 ort: "Sächsische Staatsoper im Labortheater HfBK, Dresden 2018"
-coverImg: "img/moving_stories/1.JPG"
+coverImg: "img/moving_stories/1.webp"
 coverAlt: ""
 reihenfolge: 13
 bilder:
-  - src: "img/moving_stories/5.JPG"
+  - src: "img/moving_stories/5.webp"
     alt: ""
     large: true
-  - src: "img/moving_stories/4.JPG"
+  - src: "img/moving_stories/4.webp"
     alt: ""
-  - src: "img/moving_stories/6.JPG"
+  - src: "img/moving_stories/6.webp"
     alt: ""
-  - src: "img/moving_stories/9.JPG"
-    alt: ""
-    large: true
-  - src: "img/moving_stories/1.JPG"
+  - src: "img/moving_stories/9.webp"
     alt: ""
     large: true
-  - src: "img/moving_stories/12.JPG"
+  - src: "img/moving_stories/1.webp"
+    alt: ""
+    large: true
+  - src: "img/moving_stories/12.webp"
     alt: ""
 credits:
   - rolle: "Regie"

@@ -2,24 +2,24 @@
 title: "Farbwerk-Disco"
 genre: "Tanz-Format"
 ort: "Zentralwerk, Dresden 2026"
-coverImg: "img/farbwerkDisco/unbenannt-1834.jpg"
+coverImg: "img/farbwerkDisco/unbenannt-1834.webp"
 coverAlt: ""
 reihenfolge: 2
 bilder:
-  - src: "img/farbwerkDisco/unbenannt-1834.jpg"
+  - src: "img/farbwerkDisco/unbenannt-1834.webp"
     alt: ""
     large: true
-  - src: "img/farbwerkDisco/1.jpg"
+  - src: "img/farbwerkDisco/1.webp"
     alt: ""
-  - src: "img/farbwerkDisco/35-_24A8818_bildnachweis_heike-antoci.jpg"
+  - src: "img/farbwerkDisco/35-_24A8818_bildnachweis_heike-antoci.webp"
     alt: ""
-  - src: "img/farbwerkDisco/186-_24A2544-Bearbeitet_bildnachweis_heike-antoci.jpg"
-    alt: ""
-    large: true
-  - src: "img/farbwerkDisco/48-farbWDiskoGlitzer-2908.jpg"
+  - src: "img/farbwerkDisco/186-_24A2544-Bearbeitet_bildnachweis_heike-antoci.webp"
     alt: ""
     large: true
-  - src: "img/farbwerkDisco/173-_24A9841_bildnachweis_heike-antoci.jpg"
+  - src: "img/farbwerkDisco/48-farbWDiskoGlitzer-2908.webp"
+    alt: ""
+    large: true
+  - src: "img/farbwerkDisco/173-_24A9841_bildnachweis_heike-antoci.webp"
     alt: ""
 credits:
   - rolle: "Performer*innen"
