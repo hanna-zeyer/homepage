@@ -1,9 +1,5 @@
 # Hanna Zeyer — Homepage
 
-Gebaut mit [Astro](https://astro.build). Wird automatisch veröffentlicht, wenn etwas auf GitHub gepusht wird (ca. 1–2 Minuten).
-
----
-
 ## Neues Projekt hinzufügen
 
 ### 1. Bilder hochladen
@@ -38,10 +34,6 @@ credits:
 Beschreibungstext des Projekts hier. Kann auch *kursiv* und
 <a href="https://link.de">Links</a> enthalten.
 ```
-
-### 3. Pushen — fertig!
-Commit und Push auf GitHub → die Seite baut sich automatisch neu.
-
 ---
 
 ## Lokal testen
