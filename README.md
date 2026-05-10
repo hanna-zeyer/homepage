@@ -4,7 +4,7 @@ Gebaut mit [Astro](https://astro.build). Wird automatisch veröffentlicht, wenn 
 
 ---
 
-## 🖼️ Neues Projekt hinzufügen
+## Neues Projekt hinzufügen
 
 ### 1. Bilder hochladen
 Erstelle einen Ordner unter `public/img/mein-projekt/` und lege die Bilder darin ab.
@@ -44,7 +44,7 @@ Commit und Push auf GitHub → die Seite baut sich automatisch neu.
 
 ---
 
-## 🛠️ Lokal testen
+## Lokal testen
 ```bash
 npm install
 npm run dev
@@ -53,7 +53,7 @@ npm run dev
 
 ---
 
-## 📁 Was liegt wo
+## Was liegt wo
 
 | Pfad | Inhalt |
 |---|---|
