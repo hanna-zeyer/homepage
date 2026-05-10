@@ -1,5 +1,3 @@
-# Hanna Zeyer — Homepage
-
 ## Neues Projekt hinzufügen
 
 ### 1. Bilder hochladen
